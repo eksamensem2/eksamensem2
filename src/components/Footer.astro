@@ -1,8 +1,8 @@
 <footer class="footer">
 
-    <div class="footer-kontent">
+    
       <!-- Sektion: Om Sidse-->
-      <div class="footer-section description">
+      <div class="footer-sektion om sidse">
         <h3>Sidses Keramik</h3>
         <p>
           Håndplukkede unika keramik. Jeg gør mig umage med at udvælge ler,
@@ -18,18 +18,21 @@
     <p>Alle rettigheder forbeholdt. Skytten 3 · 7100 Vejle</p>
 </div>
 
-    <div class="footer-section kontact">
+    <div class="footer-sektion kontact">
         <h3>Kontakt</h3>
 
         <div class="kontact-item">
+          <!-- Indsæt mobil ikon -->
           <a href="tel:+4526754006">+45 2675 4006</a>
         </div>
 
         <div class="kontact-item">
+          <!-- Indsæt ikon her: -->
           <p>Sidses Snedewind Sørensen</p>
         </div>
 
         <div class="kontact-item">
+          <!-- Indsæt mail ikon -->
           <a href="mailto:sidseskeramik@gmail.com">sidseskeramik@gmail.com</a>
         </div>
     </div>
@@ -44,18 +47,21 @@
       font-family: Arial, sans-serif;
       text-align: center; 
     }
+
+    .footer-content {
+    display: grid;
+    gap: 2rem;
+  }
+  .footer-section {
+    margin-bottom: 1rem;
+  }
   
   
     .kontact-item {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0.5rem 0;
-    }
-  
-    .footer-logo {
-      width: 80px;
-      margin: 1rem auto;
+      margin: 0.5rem;
     }
   
     @media (min-width: 799px) {
