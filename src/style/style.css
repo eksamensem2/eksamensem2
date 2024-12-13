@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --fs-body: 20px;
+  --fs-xxl: 5rem; /* Headline 1 - desktop */
+  --fs-xl: 3rem; /* Headline 2 - desktop */
+  --fs-l: 1.4rem; /* Headline 3 - desktop */
+  --fs-m: 1.3rem; /* Subheadline - desktop */
+  --fs-s: 1.1rem; /* Header text - desktop */
+  --fs-xs: 0.9rem; /* Hero text - desktop */
+  --fs-xxs: 0.8rem; /* Body text, Button text, bodt text itallic - desktop */
+
+  /* MOBIL STØRRELSER */
+  --mfs-xxl: 1.7rem; /* Headline 1 - mobil */
+  --mfs-xl: 1.2rem; /* Headline 2 - mobil */
+  --mfs-l: 1rem; /* Headline 3 - mobil */
+  --mfs-m: 0.7rem; /* Body text - mobil */
+  --mfs-s: 0.6rem; /* Subheadline */
+
+  --primaer-clr: #f6f2eb;
+  --sekundaer-clr: #cfc6b9;
+  --tridaer-clr: #735e50;
+  --text-clr: #4a3c39;
+  --accent-green-clr: #cbcd9d;
+  --accent-blue-clr: #abceed;
+}
+
+h1 {
+  font-size: var(--fs-xxl);
+  color: var(--text-clr);
+}
+
+h2 {
+  font-size: var(--fs-xl);
+  color: var(--text-clr);
+}
+
+h3 {
+  font-size: var(--fs-l);
+  color: var(--text-clr);
+}
+
+.subheadline {
+  font-size: var(--fs-m);
+  color: var(--text-clr);
+}
+
+p {
+  color: var(--text-clr);
+}
+
+body {
+  background-color: var(--primaer-clr);
+}
