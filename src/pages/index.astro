@@ -1,6 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
+import Some1 from "../../public/image/some1.webp";
+import Some2 from "../../public/image/some2.webp";
+import Some3 from "../../public/image/some3.webp";
+import Some4 from "../../public/image/some4.webp";
+
+import { Image } from "astro:assets";
 ---
 
 <Layout>
@@ -21,7 +27,38 @@ import Footer from "../components/Footer.astro";
     </p>
   </section>
 
-  <section></section>
+  <section class="grid_2 grid_5">
+    <Image src={Some1} alt="hænder" />
+    <Image src={Some2} alt="hænder" />
+    <Image src={Some3} alt="hænder" />
+    <Image src={Some4} alt="hænder" />
+    <Image class="hide" src={Some1} alt="hænder" />
+    <Image class="hide" src={Some2} alt="hænder" />
+    <Image class="hide" src={Some3} alt="hænder" />
+    <Image class="hide" src={Some4} alt="hænder" />
+    <Image class="hide" src={Some1} alt="hænder" />
+    <Image class="hide" src={Some2} alt="hænder" />
+  </section>
 </Layout>
 
 <Footer />
+
+<style>
+  .grid_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 600px) {
+    .hide {
+      display: none;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .grid_5 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+</style>
