@@ -5,12 +5,14 @@ import Some1 from "../../public/image/some1.webp";
 import Some2 from "../../public/image/some2.webp";
 import Some3 from "../../public/image/some3.webp";
 import Some4 from "../../public/image/some4.webp";
+import HeroForside from "../../public/image/heroForside.webp";
 
 import { Image } from "astro:assets";
 ---
 
 <Layout>
   <section class="hero">
+    <!-- <Image src={HeroForside} alt="hænder" /> -->
     <h1>SIDSES KERAMIK</h1>
 
     <p class="subheadline">
@@ -25,8 +27,14 @@ import { Image } from "astro:assets";
       keramik med sjæl og personlighed, der bringer glæde til hverdagen. Udforsk
       kollektionerne og find det perfekte match til dit hjem.
     </p>
+    <button>Se produkter</button>
   </section>
 
+  <section>
+    <h2>Kollektioner</h2>
+  </section>
+
+  <h2>Følg med på instagram</h2>
   <section class="grid_2 grid_5">
     <Image src={Some1} alt="hænder" />
     <Image src={Some2} alt="hænder" />
@@ -47,6 +55,28 @@ import { Image } from "astro:assets";
   .grid_2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  main {
+    max-width: 428px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero {
+    background-image: url("../../public/image/heroForside.webp");
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: auto;
+  }
+
+  .grønBG {
+    background-color: rgb(151, 222, 141);
   }
 
   @media (max-width: 600px) {
