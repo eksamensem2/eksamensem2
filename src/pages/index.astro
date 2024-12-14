@@ -1,16 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 import Some1 from "../../public/image/some1.webp";
 import Some2 from "../../public/image/some2.webp";
 import Some3 from "../../public/image/some3.webp";
 import Some4 from "../../public/image/some4.webp";
 import HeroForside from "../../public/image/heroForside.webp";
+import Karrusel from "../components/Karrusel.astro";
 
 import { Image } from "astro:assets";
 ---
 
 <Layout>
+  <Header />
   <section class="hero">
     <!-- <Image src={HeroForside} alt="hænder" /> -->
     <h1>SIDSES KERAMIK</h1>
@@ -30,8 +33,8 @@ import { Image } from "astro:assets";
     <button>Se produkter</button>
   </section>
 
-  <section>
-    <h2>Kollektioner</h2>
+  <section class="karrusel">
+    <Karrusel />
   </section>
 
   <h2>Følg med på instagram</h2>
@@ -77,6 +80,8 @@ import { Image } from "astro:assets";
 
   .grønBG {
     background-color: rgb(151, 222, 141);
+    text-align: center;
+    padding: 10px;
   }
 
   @media (max-width: 600px) {
