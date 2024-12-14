@@ -1,0 +1,102 @@
+<h2>Fra ler til liv - keramikkens rejse</h2>
+
+<!-- <div class="sidebar">
+  <div class="content">Sidebar</div>
+</div> -->
+<div class="scroll">
+  <div class="nr1">
+    <div class="content">1. Keramikken Drejes:</div>
+    <div class="img-container">
+      <img src="../../public/image/nubilus.webp" alt="kop" class="side" />
+    </div>
+  </div>
+  <div class="nr2">
+    <div class="content">1. Keramikken Drejes:</div>
+    <div class="img-container">
+      <img src="../../public/image/nubilus.webp" alt="kop" class="side" />
+    </div>
+  </div>
+  <div class="nr3">
+    <div class="content">1. Keramikken Drejes:</div>
+    <div class="img-container">
+      <img src="../../public/image/nubilus.webp" alt="kop" class="side" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .scroll {
+    height: 500px;
+    width: auto;
+    overflow-y: scroll;
+    background-color: rgb(139, 139, 139);
+  }
+
+  .content {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+  }
+
+  .img-container {
+    animation: fadeIn 1s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .side {
+    float: right !important;
+    width: 100%;
+    position: relative;
+    height: auto;
+    margin-right: -90%;
+  }
+
+  .animate-into-view {
+    animation: scrollIn 5s 1 forwards;
+  }
+
+  @keyframes scrollIn {
+    0% {
+      margin-right: -90%;
+    }
+    100% {
+      margin-right: 0%;
+    }
+  }
+
+  .img-container {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid red;
+  }
+</style>
+
+<script>
+  let observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.querySelector("img").classList.add("animate-into-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      rootMargin: "0px 0px -90% 0px",
+    }
+  );
+
+  document.querySelectorAll(".img-container").forEach((el) => {
+    observer.observe(el);
+  });
+</script>

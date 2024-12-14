@@ -8,8 +8,10 @@ import Some3 from "../../public/image/some3.webp";
 import Some4 from "../../public/image/some4.webp";
 import HeroForside from "../../public/image/heroForside.webp";
 import Karrusel from "../components/Karrusel.astro";
+import Keramikkensrejse from "../components/KeramikkensRejse.astro";
 
 import { Image } from "astro:assets";
+import KeramikkensRejse from "../components/KeramikkensRejse.astro";
 ---
 
 <Layout>
@@ -35,6 +37,10 @@ import { Image } from "astro:assets";
 
   <section class="karrusel">
     <Karrusel />
+  </section>
+
+  <section class="hide keramikkensrejse">
+    <KeramikkensRejse />
   </section>
 
   <h2>Følg med på instagram</h2>
