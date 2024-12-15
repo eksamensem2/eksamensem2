@@ -29,28 +29,54 @@ html {
   --accent-blue-clr: #abceed;
 }
 
+@media (max-width: 428px) {
+  h1 {
+    font-size: var(--mfs-xxl);
+  }
+
+  h2 {
+    font-size: var(--mfs-l);
+  }
+
+  h3 {
+    font-size: var(--mfs-m);
+  }
+
+  p {
+    font-size: var(--mfs-s);
+  }
+
+  .subheadline {
+    font-size: var(--mfs-m);
+  }
+}
+h1,
+h2,
+h3,
+.subheadline,
+p {
+  color: var(--text-clr);
+  line-height: 1.2;
+}
+
 h1 {
   font-size: var(--fs-xxl);
-  color: var(--text-clr);
 }
 
 h2 {
   font-size: var(--fs-xl);
-  color: var(--text-clr);
 }
 
 h3 {
   font-size: var(--fs-l);
-  color: var(--text-clr);
 }
 
 .subheadline {
   font-size: var(--fs-m);
-  color: var(--text-clr);
 }
 
 p {
-  color: var(--text-clr);
+  font-size: var(--fs-xxs);
 }
 
 body {
