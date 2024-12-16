@@ -9,6 +9,7 @@ import Some4 from "../../public/image/some4.webp";
 import HeroForside from "../../public/image/heroForside.webp";
 import Karrusel from "../components/Karrusel.astro";
 import Keramikkensrejse from "../components/KeramikkensRejse.astro";
+import Collageinspi from "../components/Collageinspi.astro";
 
 import { Image } from "astro:assets";
 import KeramikkensRejse from "../components/KeramikkensRejse.astro";
@@ -25,14 +26,20 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
     </p>
   </section>
 
-  <section class="grønBG">
-    <p>
-      Velkommen til Sidses Keramik – her mødes håndværk og æstetik i unikke,
-      håndlavede produkter. Inspireret af naturens farver og former skaber Sidse
-      keramik med sjæl og personlighed, der bringer glæde til hverdagen. Udforsk
-      kollektionerne og find det perfekte match til dit hjem.
-    </p>
-    <button>Se produkter</button>
+  <section class="grid_2-1">
+    <div class="grønBG">
+      <p class="text1">
+        Velkommen til Sidses Keramik – her mødes håndværk og æstetik i unikke,
+        håndlavede produkter. Inspireret af naturens farver og former skaber
+        Sidse keramik med sjæl og personlighed, der bringer glæde til hverdagen.
+        Udforsk kollektionerne og find det perfekte match til dit hjem.
+      </p>
+      <button>Se produkter</button>
+    </div>
+
+    <div class="hide">
+      <img src="../../public/image/forside2.webp" alt="" />
+    </div>
   </section>
 
   <section class="karrusel">
@@ -43,28 +50,144 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
     <KeramikkensRejse />
   </section>
 
+  <section>
+    <Collageinspi />
+  </section>
+
   <h2>Følg med på instagram</h2>
   <section class="grid_2 grid_5">
-    <Image src={Some1} alt="hænder" />
-    <Image src={Some2} alt="hænder" />
-    <Image src={Some3} alt="hænder" />
-    <Image src={Some4} alt="hænder" />
-    <Image class="hide" src={Some1} alt="hænder" />
-    <Image class="hide" src={Some2} alt="hænder" />
-    <Image class="hide" src={Some3} alt="hænder" />
-    <Image class="hide" src={Some4} alt="hænder" />
-    <Image class="hide" src={Some1} alt="hænder" />
-    <Image class="hide" src={Some2} alt="hænder" />
+    <div class="container">
+      <Image class="image" src={Some1} alt="hænder" />
+      <div class="middle">
+        <div class="instalogo">
+          <img src="../../public/image/unda.webp" alt="unda.webp" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <Image class="image" src={Some2} alt="hænder" />
+      <div class="middle">
+        <div class="instalogo">
+          <img src="../../public/image/unda.webp" alt="unda.webp" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <Image class="image" src={Some3} alt="hænder" />
+      <div class="middle">
+        <div class="instalogo">
+          <img src="../../public/image/unda.webp" alt="unda.webp" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <Image class="image" src={Some4} alt="hænder" />
+      <div class="middle">
+        <div class="instalogo">
+          <img src="../../public/image/unda.webp" alt="unda.webp" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <Image class="hide image" src={Some1} alt="hænder" />
+      <div class="middle">
+        <div class="instalogo">
+          <img src="../../public/image/unda.webp" alt="unda.webp" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <Image class="hide image" src={Some2} alt="hænder" />
+      <div class="middle">
+        <div class="instalogo">
+          <img src="../../public/image/unda.webp" alt="unda.webp" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <Image class="hide image" src={Some3} alt="hænder" />
+      <div class="middle">
+        <div class="instalogo">
+          <img src="../../public/image/unda.webp" alt="unda.webp" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <Image class="hide image" src={Some4} alt="hænder" />
+      <div class="middle">
+        <div class="instalogo">
+          <img src="../../public/image/unda.webp" alt="unda.webp" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <Image class="hide image" src={Some1} alt="hænder" />
+      <div class="middle">
+        <div class="instalogo">
+          <img src="../../public/image/unda.webp" alt="unda.webp" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <Image class="hide image" src={Some2} alt="hænder" />
+      <div class="middle">
+        <div class="instalogo">
+          <img src="../../public/image/unda.webp" alt="unda.webp" />
+        </div>
+      </div>
+    </div>
   </section>
 </Layout>
 
 <Footer />
 
 <style>
+  .container:hover .image {
+    opacity: 0.3;
+  }
+
+  .container:hover .middle {
+    opacity: 1;
+  }
+
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    /* width: 100%;
+    height: auto; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center; */
+  }
+
+  .instalogo {
+    color: white;
+    padding: 16px 32px;
+  }
+
   .grid_2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6px;
+  }
+
+  h2 {
+    text-align: center;
   }
 
   main {
@@ -76,12 +199,16 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
     height: auto;
   }
 
+  .text1 {
+    max-width: 517px;
+  }
+
   .hero {
     background-image: url("../../public/image/heroForside.webp");
     background-size: cover;
     background-position: center center;
     width: 100%;
-    height: 258px;
+    height: 555px;
   }
 
   .grønBG {
@@ -94,12 +221,21 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
     .hide {
       display: none;
     }
+    .hero {
+      width: 100%;
+      height: 200px;
+    }
   }
 
   @media (min-width: 600px) {
     .grid_5 {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .grid_2-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
     }
   }
 </style>
