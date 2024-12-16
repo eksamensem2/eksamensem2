@@ -1,7 +1,26 @@
-<section>
-  <h2>hej</h2>
+<sectionn class="grid_2">
+  <img class="item1" src="../../public/image/forside2.webp" alt="" />
   <img src="../../public/image/forside2.webp" alt="" />
+</sectionn>
+<section class="grid_2">
   <img src="../../public/image/forside2.webp" alt="" />
-  <img src="../../public/image/forside2.webp" alt="" />
-  <img src="../../public/image/forside2.webp" alt="" />
+  <img class="item2" src="../../public/image/forside2.webp" alt="" />
 </section>
+
+<style>
+  .item1 {
+    grid-column: 1 / span 3;
+  }
+  .item2 {
+    grid-column: 1 / span 3;
+  }
+  .grid_2 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 6px;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+</style>
