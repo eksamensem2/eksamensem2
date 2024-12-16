@@ -1,21 +1,21 @@
 ---
-import Hjerte from '/image/hjerte.svg';
-import Kurv from '/image/kurv.svg';
+
 ---
 
     <div class="card">
         <div class="card-image">
-          <img src="/image/unfamBG.webp" alt="Kop med hank" />
-          <span class="heart-icon">
-            <Hjerte />
-          </span>
-        </div>
+          <img src="/public/image/unda.webp" alt="Kop med hank" />
+          <img class="heart-icon" src="/image/hjerte.svg" alt="Hjerte" />
+    </div>
       
         <div class="card-content">
-            <h2>
-              Kop med hank <span class="price">399,00 kr</span>
-            </h2>
-            <h3>Kollektion</h3>
+            <div class="heading">
+                <h3>
+                    Kop med hank <span class="price">399,00 kr</span>
+                  </h3>
+            </div>
+            
+            <p class="bold">Kollektion</p>
             <p>
               Perfekt til din morgenrutine, denne håndlavede skål kombinerer nordisk
               minimalisme med naturlige farver. Ideel til yoghurt, grød eller snacks.
@@ -24,7 +24,7 @@ import Kurv from '/image/kurv.svg';
 
           <div class="card-footer">
             <span class="basket-icon">
-              <Kurv />
+              
             </span>
           </div>
         </div>
@@ -32,10 +32,78 @@ import Kurv from '/image/kurv.svg';
   <style>
 
 .card {
+    display: flex;
+    width: 343px;
+    flex-direction: column;
+    align-items: flex-start;
   width: 300px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
+.card-content{
+    display: flex;
+padding: 16px 24px;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+align-self: stretch;
+}
+.card-image img {
+  width: 100%;
+  max-width: 200px;
+  align-items: center;
+
+}
+.heart-icon{
+    
+    position: absolute;
+    right: 23.839px;
+
+top: 21px;
+}
+
+
+h1,
+h2,
+h3,
+.subheadline,
+p {
+  color: var(--text-clr);
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: var(--fs-l);
+}
+
+.subheadline {
+  font-size: var(--fs-m);
+}
+
+p {
+  font-size: var(--fs-xxs);
+}
+.price{
+    
+}
+
+/* MOBIL */
+@media (max-width: 678px) {
+ 
+  h3 {
+    font-size: var(--mfs-m);
+  }
+
+  p {
+    font-size: var(--mfs-s);
+  }
+
+  .subheadline {
+    font-size: var(--mfs-m);
+  }
+}
+
   </style>

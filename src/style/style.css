@@ -4,7 +4,23 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Didot";
+  src: url(../font/Didot\ Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "MontserratRegular";
+  src: url(../font/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "MontserratLightItalic";
+  src: url(../font/Montserrat-LightItalic.ttf) format("truetype");
+}
+
 html {
+  /* DESKTOP STØRRELSER */
   --fs-body: 20px;
   --fs-xxl: 5rem; /* Headline 1 - desktop */
   --fs-xl: 3rem; /* Headline 2 - desktop */
@@ -21,15 +37,21 @@ html {
   --mfs-m: 0.7rem; /* Body text - mobil */
   --mfs-s: 0.6rem; /* Subheadline */
 
+  /* FARVER */
   --primaer-clr: #f6f2eb;
   --sekundaer-clr: #cfc6b9;
   --tridaer-clr: #735e50;
   --text-clr: #4a3c39;
   --accent-green-clr: #cbcd9d;
   --accent-blue-clr: #abceed;
+
+  --ff-headlines: "Didot", sans-serif;
+  --ff-main: "MontserratRegular", sans-serif;
+  --ff-mainspeciel: "MontserratLightItalic", sans-serif;
 }
 
-@media (max-width: 428px) {
+/* MOBIL */
+@media (max-width: 678px) {
   h1 {
     font-size: var(--mfs-xxl);
   }
@@ -50,13 +72,14 @@ html {
     font-size: var(--mfs-m);
   }
 }
+
+/* GENERELT & DESKTOP */
 h1,
 h2,
 h3,
-.subheadline,
-p {
-  color: var(--text-clr);
+.subheadline {
   line-height: 1.2;
+  font-family: "Didot", sans-serif;
 }
 
 h1 {
@@ -77,8 +100,13 @@ h3 {
 
 p {
   font-size: var(--fs-xxs);
+  font-family: "Didot", sans-serif;
 }
 
 body {
   background-color: var(--primaer-clr);
+}
+
+.bold {
+  font-weight: bold;
 }
