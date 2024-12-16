@@ -1,0 +1,119 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <Header />
+
+  <h1>Kollektioner</h1>
+
+  <section class="grid_4">
+    <div>
+      <h2>Silva</h2>
+    </div>
+    <div>
+      <h2>Terra</h2>
+    </div>
+    <div>
+      <h2>Unda</h2>
+    </div>
+    <div>
+      <h2>Numbilus</h2>
+    </div>
+  </section>
+
+  <hr class="solid" />
+
+  <section class="grid_2 kollektioner">
+    <div>
+      <img src="../../public/image/silvaKollektion.webp" alt="" />
+      <h3>Silva</h3>
+      <p>
+        Latinsk for "skov", Inspireret af til de dæmpede, naturlige toner, jeg
+        forbinder med skovlandskaber.
+      </p>
+      <button></button>
+    </div>
+    <div>
+      <img src="../../public/image/terraKollektion.webp" alt="" />
+      <h3>Terra</h3>
+      <p>
+        Latinsk for "jord", inspireret af koppens naturlige og rustikke udtryk.
+      </p>
+      <button></button>
+    </div>
+    <div>
+      <img src="../../public/image/undaKollektion.webp" alt="" />
+      <h3>Unda</h3>
+      <p>
+        Latinsk for "bølge" eller "strøm", inspireret af den buede og flydende
+        form.
+      </p>
+      <button> </button>
+    </div>
+    <div>
+      <img src="../../public/image/numbilusKollektion.webp" alt="" />
+      <h3>Numbilus</h3>
+      <p>
+        Latinsk for "skylignende" eller "overskyet", inspireret af den bløde
+        overgang mellem farverne og det drømmende udtryk.
+      </p>
+      <button> </button>
+    </div>
+  </section>
+
+  <Footer />
+  <Layout />
+
+  <style>
+    .kollektioner {
+      margin: 50px 20px;
+    }
+    .grid_4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 6px;
+      margin-top: 50px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      width: 311px;
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    hr.solid {
+      border-top: 3px solid #000000;
+      margin: 0 40px;
+    }
+
+    @media (min-width: 600px) {
+      .grid_2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        margin-top: 50px;
+      }
+
+      .grid_4 {
+        padding: 10px 50px;
+      }
+    }
+  </style>
+</Layout>

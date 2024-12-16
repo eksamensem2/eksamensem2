@@ -1,0 +1,17 @@
+export async function getStaticPaths() {
+    const  = await fetch (
+      "https://xvhywspcmauhtujngvxo.supabase.co/rest/v1/karrusel",
+    {
+      headers:{
+        apikey:
+""      },
+    }
+  ).then((res) => res.json());
+  
+  return .map(() => ({
+        params: { :  }, 
+        props: {  }, 
+      }))
+  }
+  
+  const {  } = Astro.props;
