@@ -1,4 +1,6 @@
 ---
+// const {kollektioner} = Astro.props;
+
 
 const kollektioner = await fetch("https://socvoibygqltdglscttm.supabase.co/rest/v1/listeview_card",{
 method:"GET",
@@ -7,10 +9,11 @@ headers:{
 },
 })
 .then((res)=>res.json());
+
 // .then(showData)
 
 // function showData(items){
-    console.log(kollektioner);
+    // console.log(kollektioner);
     // items.forEach()
 
 // function (){}
@@ -18,12 +21,14 @@ headers:{
 ---
 
 
+    <!-- {kollektioner.map((Listecard) => <h1>{kollektion.titel}</h1>)} -->
 
 
 
     <div class="card">
         <div class="card-image">
-          {kollektioner[0].img}
+          <img src=`../../public/image${kollektioner.img}` alt={kollektioner.titel}></img>
+          <!-- {kollektioner[0].img} -->
 
     </div>
       
