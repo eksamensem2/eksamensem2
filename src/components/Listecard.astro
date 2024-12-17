@@ -1,30 +1,47 @@
 ---
 
+const kollektioner = await fetch("https://socvoibygqltdglscttm.supabase.co/rest/v1/listeview_card",{
+method:"GET",
+headers:{
+  apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNvY3ZvaWJ5Z3FsdGRnbHNjdHRtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM5MTg4NTksImV4cCI6MjA0OTQ5NDg1OX0.k-0jnIHYJuGx-8HeMip4kxl1phEdqwn1oct3VcV9yWE"
+},
+})
+.then((res)=>res.json());
+// .then(showData)
+
+// function showData(items){
+    console.log(kollektioner);
+    // items.forEach()
+
+// function (){}
+
 ---
+
+
+
+
 
     <div class="card">
         <div class="card-image">
-          <img src="/public/image/unda.webp" alt="Kop med hank" />
-          <img class="heart-icon" src="/image/hjerte.svg" alt="Hjerte" />
+          {kollektioner[0].img}
+
     </div>
       
         <div class="card-content">
             <div class="heading">
                 <h3>
-                    Kop med hank <span class="price">399,00 kr</span>
+                  {kollektioner[0].titel}
+                  {kollektioner[0].price}
                   </h3>
             </div>
-            
-            <p class="bold">Kollektion</p>
+            {kollektioner[0].kollektion}
+
             <p>
-              Perfekt til din morgenrutine, denne håndlavede skål kombinerer nordisk
-              minimalisme med naturlige farver. Ideel til yoghurt, grød eller snacks.
+              {kollektioner[0].description}
+
             </p>
         
-            <a class="button" href="indhold_05.html">
-                Klik her
-                
-            </a>
+          
           </div>
 
           <div class="card-footer">
