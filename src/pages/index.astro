@@ -19,7 +19,7 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
   <Header />
   <section class="hero">
     <!-- <Image src={HeroForside} alt="hænder" /> -->
-    <h1>SIDSES KERAMIK</h1>
+    <h2 class="h1">SIDSES KERAMIK</h2>
 
     <p class="subheadline">
       Hver nuance en historie - Sidses håndlavede keramik til dig
@@ -54,7 +54,7 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
     <Collageinspi />
   </section>
 
-  <h2>Følg med på instagram</h2>
+  <h2 class="h2">Følg med på instagram</h2>
   <section class="grid_2 grid_5">
     <div class="container">
       <Image class="image" src={Some1} alt="hænder" />
@@ -186,8 +186,16 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
     gap: 6px;
   }
 
-  h2 {
+  .h2 {
     text-align: center;
+  }
+
+  .h1{
+    padding: 30px 10px 0 15px;
+  }
+
+  .subheadline{
+    padding: 0 0 0 15px;
   }
 
   main {
@@ -200,7 +208,7 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
   }
 
   .text1 {
-    max-width: 517px;
+    padding: 20px 10px;
   }
 
   .hero {
@@ -212,9 +220,13 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
   }
 
   .grønBG {
-    background-color: rgb(151, 222, 141);
     text-align: center;
     padding: 10px;
+    background-color: var(--accent-green-clr)
+  }
+
+  .button{
+    margin:30px;
   }
 
   @media (max-width: 600px) {
@@ -237,5 +249,6 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
       grid-template-columns: 1fr 1fr;
       gap: 0;
     }
+  
   }
 </style>
