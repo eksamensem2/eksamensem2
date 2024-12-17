@@ -91,7 +91,7 @@ h2,
 h3,
 .subheadline {
   line-height: 1.2;
-  font-family: "Didot", sans-serif;
+  font-family: var(--ff-headlines);
 }
 
 h1 {
