@@ -230,6 +230,21 @@ font-size: var(--fs-s);
   padding-bottom: 0;
 }
 
+/* FOR SMALLER SCREENS (under 650px) */
+@media (max-width: 650px) {
+  .product-card {
+    flex-direction: column; /* Skifter retningen fra række til kolonne */
+  }
+
+  /* Fjerner alt mellemrum og justering */
+  .product-image {
+    order: 1; /* Sætter billede-sektionen før detaljer-sektionen */
+  }
+
+  .product-details {
+    order: 2; /* Sætter detaljer-sektionen efter billede-sektionen */
+  }
+}
 
 
   </style>
