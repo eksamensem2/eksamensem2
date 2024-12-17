@@ -11,30 +11,30 @@ import Layout from "../layouts/Layout.astro";
 
   <section class="grid_4">
     <div>
-      <h2>Silva</h2>
+      <h3>Silva</h3>
     </div>
     <div>
-      <h2>Terra</h2>
+      <h3>Terra</h3>
     </div>
     <div>
-      <h2>Unda</h2>
+      <h3>Unda</h3>
     </div>
     <div>
-      <h2>Numbilus</h2>
+      <h3>Numbilus</h3>
     </div>
   </section>
 
   <hr class="solid" />
 
   <section class="grid_2 kollektioner">
-    <div>
+    <div class="kollektioncard">
       <img src="../../public/image/silvaKollektion.webp" alt="" />
       <h3>Silva</h3>
       <p>
         Latinsk for "skov", Inspireret af til de dæmpede, naturlige toner, jeg
         forbinder med skovlandskaber.
       </p>
-      <button>læs mere</button>
+      <a class="button" href="">LÆS MERE</a>
     </div>
     <div>
       <img src="../../public/image/terraKollektion.webp" alt="" />
@@ -42,7 +42,7 @@ import Layout from "../layouts/Layout.astro";
       <p>
         Latinsk for "jord", inspireret af koppens naturlige og rustikke udtryk.
       </p>
-      <button>læs mere</button>
+      <a class="button" href="">LÆS MERE</a>
     </div>
     <div>
       <img src="../../public/image/undaKollektion.webp" alt="" />
@@ -51,7 +51,8 @@ import Layout from "../layouts/Layout.astro";
         Latinsk for "bølge" eller "strøm", inspireret af den buede og flydende
         form.
       </p>
-      <button>læs mere </button>
+      <a class="button" href="">LÆS MERE</a>
+
     </div>
     <div>
       <img src="../../public/image/numbilusKollektion.webp" alt="" />
@@ -60,7 +61,7 @@ import Layout from "../layouts/Layout.astro";
         Latinsk for "skylignende" eller "overskyet", inspireret af den bløde
         overgang mellem farverne og det drømmende udtryk.
       </p>
-      <button>læs mere </button>
+      <a class="button" href="">LÆS MERE</a>
     </div>
   </section>
 
@@ -70,6 +71,12 @@ import Layout from "../layouts/Layout.astro";
   <style>
     .kollektioner {
       margin: 50px 20px;
+      padding: 0 0 30px 0;
+    }
+
+    .kollektioncard{
+        padding: 0 0 20px 0;
+
     }
     .grid_4 {
       display: grid;
@@ -83,14 +90,10 @@ import Layout from "../layouts/Layout.astro";
     }
 
     p {
-      width: 311px;
+      /* width: 311px; */
       text-align: center;
     }
     h3 {
-      text-align: center;
-    }
-
-    h2 {
       text-align: center;
     }
 
@@ -102,14 +105,12 @@ import Layout from "../layouts/Layout.astro";
       border-top: 1px solid #000000;
       margin: 0 40px;
     }
-    button{
-        font-size: 14px;
-        align-items: center;
-        cursor: pointer;  
-        padding: 15px 25px;
 
-
-        }
+    .button{
+        display: flex;
+  justify-content: center;
+  margin: 1rem 20px;
+    }
 
     @media (min-width: 600px) {
       .grid_2 {
@@ -122,10 +123,6 @@ import Layout from "../layouts/Layout.astro";
       .grid_4 {
         padding: 10px 50px;
       }
-    }
-
-    {
-  
     }
   </style>
 </Layout>
