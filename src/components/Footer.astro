@@ -1,84 +1,110 @@
-<footer class="footer">
-
-    
-      <!-- Sektion: Om Sidse-->
-      <div class="footer-sektion om sidse">
-        <h3>Sidses Keramik</h3>
-        <p>
-          Håndplukkede unika keramik. Jeg gør mig umage med at udvælge ler,
-          der er holdbart til hverdagens brug, og så lægger jeg vægt på det
-          minimalistiske design, der passer til ethvert hjem.
-        </p>
-        <div/>
-    </div>
-  
-       <!-- Sektion: Logo -->
-<div class="footer-sektion logo">
-    <p>© 2024 Sidses Keramik</p>
-    <p>Alle rettigheder forbeholdt. Skytten 3 · 7100 Vejle</p>
-</div>
-
-    <div class="footer-sektion kontact">
-        <h3>Kontakt</h3>
-
-        <div class="kontact-item">
-          <!-- Indsæt mobil ikon -->
-          <a href="tel:+4526754006">+45 2675 4006</a>
-        </div>
-
-        <div class="kontact-item">
-          <!-- Indsæt ikon her: -->
-          <p>Sidses Snedewind Sørensen</p>
-        </div>
-
-        <div class="kontact-item">
-          <!-- Indsæt mail ikon -->
-          <a href="mailto:sidseskeramik@gmail.com">sidseskeramik@gmail.com</a>
-        </div>
-    </div>
-  
-</footer>
-  
-  <style>
-    .footer {
-      background-color: #d1c5b5; 
-      color: #4a3c31; 
-      padding: 2rem 1rem;
-      font-family: Arial, sans-serif;
-      text-align: center; 
-    }
-
-    .footer-content {
+<!-- Ingen JavaScript nødvendigt -->
+<style>
+  /* Footer grundstruktur */
+  .footer {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #f0eae4; /* Ensartet baggrund */
+    color: #4b403a;
+  }
+
+  /* Sektioner i footer */
+  .footer-section {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 250px;
+  }
+
+  /* Tekst i sektioner */
+  .footer-section p {
+    max-width: 300px;
+    margin: 0;
+    text-align: left;
+    line-height: 1.5rem;
+  }
+
+  /* Links og hover-effekt */
+  .footer-section a {
+    text-decoration: none;
+    color: inherit;
+    line-height: 2rem;
+  }
+
+  .footer-section a:hover {
+    color: #ab7967;
+    text-decoration: underline;
+  }
+
+  /* Ikoner */
+  .footer-icons {
+    display: flex;
+    justify-content: center;
     gap: 2rem;
   }
-  .footer-section {
-    margin-bottom: 1rem;
+
+  /* Logo i midtersektionen */
+  .footer-logo {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
-  
-  
-    .kontact-item {
-      display: flex;
+
+  .footer-logo img {
+    width: 80px;
+  }
+
+  /* Responsiv styling */
+  @media (max-width: 768px) {
+    .footer {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .footer-section {
+      height: auto;
       align-items: center;
-      justify-content: center;
-      margin: 0.5rem;
     }
-  
-    @media (min-width: 799px) {
-      .footer-kontent {
-        grid-template-columns: repeat(3, 1fr); 
-        text-align: left;
-        max-width: 1200;
-        margin: 0 auto;
-      }
-  
-      .footer-section {
-        margin: 0;
-      }
-  
-      .kontact-item {
-        justify-content:; 
-      }
+
+    .footer-logo {
+      grid-column: 1;
     }
-  </style>
-  
+  }
+</style>
+
+<footer class="footer">
+  <!-- Venstre Sektion -->
+  <div class="footer-section">
+    <h3>Sidses Keramik</h3>
+    <p>
+      Håndplukket unika keramik. Jeg gør mig umage med at udvælge ler, der er holdbart
+      til hverdagens brug, og lægger vægt på minimalistisk design.
+    </p>
+  </div>
+
+  <!-- Midtersektion med Logo og Sociale medier -->
+  <div class="footer-section">
+    <div class="footer-icons">
+      <a href="#" aria-label="TikTok">
+        <img src="/icons/tiktok-icon.svg" alt="TikTok" width="24" height="24" />
+      </a>
+      <a href="#" aria-label="Instagram">
+        <img src="/icons/instagram-icon.svg" alt="Instagram" width="24" height="24" />
+      </a>
+    </div>
+  </div>
+
+  <!-- Højre Sektion - Kontakt -->
+  <div class="footer-section">
+    <h3>Kontakt</h3>
+    <p>
+      <a href="mailto:sidseskeramik@gmail.com">sidseskeramik@gmail.com</a>
+    </p>
+    <p>
+      <a href="tel:+4526754006">+45 26754006</a>
+    </p>
+  </div>
+</footer>
