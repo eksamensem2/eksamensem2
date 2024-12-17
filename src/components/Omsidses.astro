@@ -1,0 +1,115 @@
+---
+import OmMigHero from "../../public/image/omMigHero.webp"
+import Image from "astro/components/Image.astro"
+import omMig2 from "../../public/image/omMig2.webp"
+import omMig3 from "../../public/image/omMig3.webp"
+import omMig4 from "../../public/image/omMig4.webp"
+import omMig5 from "../../public/image/omMig5.webp"
+import omMigHero from "../../public/image/omMigHero.webp"
+---
+ 
+ <!-- HERO SECTION -->
+ <header class="hero">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>SIDSE <span class="bold">SNEDEVIND</span></h1>
+        <p class="subheadline">Kunstneren bag Sidses Keramik</p>
+      </div>
+      <div class="hero-image">
+        <Image class="image" src={omMigHero} alt="Keramik proces 1"/>
+      </div>
+    </div>
+  </header>
+
+  <!-- BILLEDER-SEKTION -->
+  <section class="image-gallery">
+    <div class="gallery-container">
+        <Image class="image" src={omMig2} alt="Keramik proces 1"/>
+        <Image class="image" src={omMig3} alt="Keramik proces 2"/>
+        <Image class="image" src={omMig4} alt="Keramik færdige produkter"/>
+        <Image class="image" src={omMig5} alt="Sidse med skål"/>
+    </div>
+  </section>
+
+    <!-- TEKST-SEKTION -->
+    <section class="text-section">
+        <div class="text-container">
+          <div class="text-left">
+            <p>
+                Mit navn er Sidse Snedevind Sørensen, og jeg har altid haft en passion for at skabe med mine hænder. Efter flere års udvikling af mine keramiske evner og et livsforandrende ophold i Paris, hvor jeg lærte af dygtige keramikere, er jeg nu klar til at dele mine kreationer med jer. <br>
+                Min tid i Paris var en fantastisk rejse, hvor jeg blev inspireret af byens kreative energi og mødte mennesker, der åbnede mine øjne for nye måder at arbejde med keramik på. Jeg lærte hurtigt, at keramik er en konstant læringsproces, og jeg elsker at kunne udforske nye teknikker og muligheder. Selvom mine værker ikke altid er perfekte, er det netop de små variationer og skævheder, der gør dem unikke og personlige.            </p>
+          </div>
+          <div class="text-right">
+            <p>I dag arbejder jeg i mit eget værksted i Aarhus, hvor jeg skaber alt fra kopper og skåle til unikke tallerkener. Jeg har indrettet mit hjem som et kreativt rum, hvor jeg kan fordybe mig i arbejdet med leret og eksperimentere med nye teknikker og former. Det er en helt speciel følelse at skabe noget med hænderne, og jeg elsker den proces, hvor noget råt langsomt bliver til et færdigt og funktionelt kunstværk. <br> Hver dag giver mig mulighed for at udvikle mig som keramiker, og jeg prøver altid at udfordre mig selv med nye idéer og udtryk. Jeg henter inspiration fra både naturen, mødet med andre kunstnere og min egen rejse gennem keramikverdenen. Jeg ønsker at udtrykke en personlig vision og fortælle en historie gennem mine værker.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <style>
+        /* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--sekundaer-clr);
+  padding: 2rem;
+}
+
+.hero-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* IMAGE GALLERY */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  background: var(--primaer-clr);
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* TEXT SECTION */
+.text-section {
+  background: var(--accent-blue-clr);
+  color: var(--text-clr);
+  padding: 3rem 2rem;
+}
+
+.text-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.text-left,
+.text-right {
+  flex: 1;
+}
+
+      </style>
