@@ -28,7 +28,7 @@ headers:{
 <!-- <h1>{kollektioner[0].titel}</h1> -->
 <Layout>
     <Header />
-    <ul>
+    <ul class="grid_3">
     {kollektioner.map((kollektion) => <Listecard kollektion={kollektion} /> )}
 </ul>
     <!-- {artists.map((artist) => <Acard artist={artist} />)} -->
@@ -39,3 +39,10 @@ headers:{
 
 <Footer />
 </Layout>
+
+<style>
+    .grid_3{
+        display:grid;
+      grid-template-columns: repeat(1fr 1fr 1fr)
+    }
+</style>
