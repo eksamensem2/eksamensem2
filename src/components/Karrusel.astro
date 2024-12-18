@@ -9,43 +9,48 @@ headers:{
 
 ---
 
+
+
 <section class="karruselcard">
   <h2>Kollektioner</h2>
   <div class="carousel" data-carousel>
     <button class="carousel-button prev" data-carousel-button="prev"
-      >&#8656;</button
-    >
+      >&#8656;</button>
     <button class="carousel-button next" data-carousel-button="next"
-      >&#8658;</button
-    >
+      >&#8658;</button>
 
     <ul data-slides>
       <li class="slide" data-active>
-        <!-- <img src={`/image/${kollektioner.img}`} alt={kollektioner.title}/> -->
 
-        <img src="../../public/image/silvamBG.webp" alt="silva kop" />
-        <h2>Silva</h2>
-        <p>bla bla bla</p>
+        <img class="karruselimg" src="../../public/image/silvamBG.webp" alt="silva kop" />
+        <h3>{kollektioner[0].kollektion}        </h3>
+        <p class="pcenter">{kollektioner[0].description}
+        </p>
       </li>
       <li class="slide">
-        <img src="../../public/image/terramBG.webp" alt="silva kop" />
-        <h2>Terra</h2>
-        <p>bla bla bla</p>
+        <img class="karruselimg" src="../../public/image/terramBG.webp" alt="terra kop" />
+        <h3>{kollektioner[1].kollektion}        </h3>
+        <p class="pcenter">{kollektioner[1].description}
+        </p>
       </li>
       <li class="slide">
-        <img src="../../public/image/numbilusmBG.webp" alt="silva kop" />
-        <h2>Numbilums</h2>
-        <p>bla bla bla</p>
+        <img class="karruselimg" src="../../public/image/numbilusmBG.webp" alt="numbilus kop" />
+        <h3>{kollektioner[2].kollektion}        </h3>
+        <p class="pcenter">{kollektioner[2].description}
+        </p>
       </li>
       <li class="slide">
-        <img src="../../public/image/undamBG.webp" alt="silva kop" />
-        <h2>Unda</h2>
-        <p>bla bla bla</p>
+        <img class="karruselimg" src="../../public/image/undamBG.webp" alt="unda kop" />
+        <h3>{kollektioner[3].kollektion}        </h3>
+        <p class="pcenter">{kollektioner[3].description}
+        </p>
       </li>
     </ul>
   </div>
 </section>
 
+{kollektioner[0].description}
+{kollektioner[0].price}
 <style>
   *,
   *::before,
@@ -53,14 +58,25 @@ headers:{
     box-sizing: border-box;
   }
 
+  .pcenter{
+    max-width: 37ch;
+    padding: 10px 0 0 0;
+    }
+
+
   .karruselcard {
     text-align: center;
+  }
+
+  .karruselimg{
+    padding: 40px 40px 10px 40px;
   }
 
   .carousel {
     width: 100vw;
     height: 100vh;
     position: relative;
+    padding: 
   }
 
   .carousel > ul {
@@ -96,21 +112,20 @@ headers:{
     z-index: 2;
     background: none;
     border: none;
-    font-size: 4rem;
-    top: 50%;
-
+    font-size: 2rem;
+    margin: 40% 0;
     transform: translateY(-50%);
-    color: pink;
+    color: var(--text-clr);
     cursor: pointer;
-    border-radius: 0.25rem;
-    padding: 0 0.5rem;
-    background-color: green;
+    border-radius: 100rem;
+    padding: 0 0.6rem;
+    background-color: var(--sekundaer-clr);
   }
 
   .carousel-button:hover,
   .carousel-button:focus {
-    color: wheat;
-    background-color: blue;
+    color: var(--sekundaer-clr);
+    background-color: var(--text-clr);
   }
 
   .carousel-button:focus {
@@ -124,7 +139,20 @@ headers:{
   .carousel-button.next {
     right: 1rem;
   }
+
+  @media (min-width: 600px) {
+    .pcenter{
+    max-width: 47ch;
+    }
+    .carousel-button {
+      margin: 30% 60px;
+      position: relative;
+
+    }
+  }
 </style>
+
+
 
 <script>
   const buttons = document.querySelectorAll("[data-carousel-button]");
