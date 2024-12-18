@@ -48,6 +48,8 @@ html {
   --ff-headlines: "Didot", sans-serif;
   --ff-main: "MontserratRegular", sans-serif;
   --ff-mainspeciel: "MontserratLightItalic", sans-serif;
+
+  --lh-main: 2em;
 }
 
 /* MOBIL */
@@ -114,6 +116,8 @@ h3 {
 p {
   font-size: var(--fs-xxs);
   font-family: "Didot", sans-serif;
+  line-height: var(--lh-main);
+  max-width: 65ch; /* Begræns linjelængden til 65 tegn pr. linje */
 }
 
 body {
