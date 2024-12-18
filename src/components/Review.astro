@@ -1,14 +1,23 @@
 ---
+import Image from 'astro/components/Image.astro';
+import trustpilot from "../../public/image/trustpilot.svg";
+import femstjerner from "../../public/image/femstjerner.svg";
+
+
 
 // Hvis du har et array af anmeldelser
 const reviews = [
-  { name: "Ella-my", text: "Skålen er blevet min favorit i køkkenet. Den er både praktisk og virkelig smuk at have stående." },
-  { name: "Carl-William", text: "Keramikken er lige, hvad jeg ledte efter – naturligt, smukt og med så mange fine detaljer." },
-  { name: "Sara-Li", text: "Koppen er blevet min favorit til morgenkaffe. Den har sådan en dejlig personlighed og varme." },
-  { name: "Erik", text: "Fantastisk kvalitet og utrolig smukke detaljer. Jeg elsker at bruge dem hver dag." },
-  { name: "Lotte", text: "Utroligt håndværk! Det gør hverdagen lidt smukkere at bruge disse keramikstykker." },
-  { name: "Mads", text: "Skåle og tallerkener, som er perfekte til både hverdag og fest. Smukke og funktionelle!" },
+  { name: "Ella-my", text: "\"Skålen er blevet min favorit i køkkenet. Den er både praktisk og virkelig smuk at have stående.\"" },
+  { name: "Carl-William", text: "\"Keramikken er lige, hvad jeg ledte efter – naturligt, smukt og med så mange fine detaljer.\"" },
+  { name: "Sara-Li", text: "\"Koppen er blevet min favorit til morgenkaffe. Den har sådan en dejlig personlighed og varme.\"" },
+  { name: "Erik", text: "\"Fantastisk kvalitet og utrolig smukke detaljer. Jeg elsker at bruge dem hver dag.\"" },
+  { name: "Lotte", text: "\"Utroligt håndværk! Det gør hverdagen lidt smukkere at bruge disse keramikstykker.\"" },
+  { name: "Mads", text: "\"Skåle og tallerkener, som er perfekte til både hverdag og fest. Smukke og funktionelle!\"" },
+  { name: "Emma", text: "\"Skålen er blevet min favorit i køkkenet. Den er både praktisk og virkelig smuk at have stående.\"" },
+  { name: "Jens Peter", text: "\"Keramikken er lige, hvad jeg ledte efter – naturligt, smukt og med så mange fine detaljer.\"" },
+
 ];
+
 ---
 
 <style>
@@ -28,12 +37,17 @@ const reviews = [
   .card {
     min-width: 25%; /* Viser 4 kort ad gangen */
     box-sizing: border-box;
-    background: #fff;
-    border-radius: 8px;
+    border-radius: 1px;
+    background: var(--primaer-clr);
     padding: 16px;
     margin: 0 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: inline-flex;
+    padding: 35px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 29px;
+    
   }
 
   h3 {
@@ -43,8 +57,23 @@ const reviews = [
 }
 p{
 font-size: var(--fs-xxs);;
+color: var(--text-clr);  
+font-family: var(--ff-mainspeciel);
+
+}
+.enlinje{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
   
+.enlinje h3 {
+  margin-right: 35px; /* Tilføjer afstand mellem overskriften og billedet */
+}
+
+.enlinje img {
+  margin-left: auto; /* Skubber billedet helt til højre */
+}
 
 @media (max-width: 600px) {
     .hide {
@@ -58,8 +87,9 @@ font-size: var(--fs-xxs);;
   <div class="slider" id="slider">
     {reviews.map((review) => (
       <div class="card">
-        <h3>{review.name}</h3>
+        <div class="enlinje"><h3>{review.name}</h3> <Image class="image" src={femstjerner} alt="fem stjerner"/></div>
         <p>{review.text}</p>
+        <Image class="image" src={trustpilot} alt="trustpilot"/>
       </div>
     ))}
   </div>
