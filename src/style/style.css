@@ -120,6 +120,11 @@ p {
   max-width: 65ch; /* Begræns linjelængden til 65 tegn pr. linje */
 }
 
+.pcenter{
+  margin: auto;
+
+}
+
 body {
   background-color: var(--primaer-clr);
 }
