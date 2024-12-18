@@ -1,5 +1,5 @@
 ---
-const {titel, price, description, kollektion, img} = Astro.props;
+const {kollektion} = Astro.props;
 
 
 const kollektioner = await fetch("https://socvoibygqltdglscttm.supabase.co/rest/v1/listeview_card",{
@@ -23,7 +23,7 @@ headers:{
 
     <!-- {kollektioner.map((Listecard) => <h1>{kollektion.titel}</h1>)}
     <li>
-<!-- {      <img src={`/image/${kollektioner.img}`} alt={kollektioner.title}/> -->
+{      <img src={`/image/${kollektioner.img}`} alt={kollektioner.title}/> -->
 <!-- </li> -->
 
 
