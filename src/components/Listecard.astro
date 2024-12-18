@@ -1,5 +1,5 @@
 ---
-// const {kollektioner} = Astro.props;
+const {titel, price, description, kollektion, img} = Astro.props;
 
 
 const kollektioner = await fetch("https://socvoibygqltdglscttm.supabase.co/rest/v1/listeview_card",{
@@ -21,15 +21,19 @@ headers:{
 ---
 
 
-    <!-- {kollektioner.map((Listecard) => <h1>{kollektion.titel}</h1>)} -->
+    <!-- {kollektioner.map((Listecard) => <h1>{kollektion.titel}</h1>)}
+    <li>
+<!-- {      <img src={`/image/${kollektioner.img}`} alt={kollektioner.title}/> -->
+<!-- </li> -->
 
 
-
+<section  class="grid_3">
+  <div>
     <div class="card">
         <div class="card-image">
-          <img src=`../../public/image${kollektioner.img}` alt={kollektioner.titel}></img>
-          <!-- {kollektioner[0].img} -->
-
+          <img src={"/image/" + kollektion} alt={kollektioner.img}/>
+          {kollektioner[0].img}
+          
     </div>
       
         <div class="card-content">
@@ -45,8 +49,6 @@ headers:{
               {kollektioner[0].description}
 
             </p>
-        
-          
           </div>
 
           <div class="card-footer">
@@ -55,8 +57,18 @@ headers:{
             </span>
           </div>
         </div>
+      </div>
+
+      </section>
 
   <style>
+
+    .grid_3{
+      display:grid;
+      grid-template-columns: repeat(1fr 1fr 1fr);
+
+
+    }
 
 .card {
     display: flex;
