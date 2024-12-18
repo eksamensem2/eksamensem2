@@ -12,11 +12,11 @@ import omMigHero from "../../public/image/omMigHero.webp"
  <header class="hero">
     <div class="hero-container">
       <div class="hero-text">
-        <h1>SIDSE <span class="bold">SNEDEVIND</span></h1>
+        <h1>SIDSE SNEDEVIND</h1>
         <p class="subheadline">Kunstneren bag Sidses Keramik</p>
       </div>
       <div class="hero-image">
-        <Image class="image" src={omMigHero} alt="Keramik proces 1"/>
+         <Image class="image" src={OmMigHero} alt="Keramik proces 1"/>
       </div>
     </div>
   </header>
@@ -53,7 +53,8 @@ import omMigHero from "../../public/image/omMigHero.webp"
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--sekundaer-clr);
+  background: var(--tridaer-clr);
+
   padding: 2rem;
 }
 
@@ -61,6 +62,8 @@ import omMigHero from "../../public/image/omMigHero.webp"
   display: flex;
   gap: 2rem;
   align-items: center;
+  
+  color: var(--primaer-clr);
 }
 
 .hero-text {
@@ -70,7 +73,6 @@ import omMigHero from "../../public/image/omMigHero.webp"
 .hero-image img {
   width: 300px;
   height: auto;
-  border-radius: 8px;
 }
 
 /* IMAGE GALLERY */
@@ -91,7 +93,7 @@ import omMigHero from "../../public/image/omMigHero.webp"
 .gallery-container img {
   width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 2px;
   object-fit: cover;
 }
 
