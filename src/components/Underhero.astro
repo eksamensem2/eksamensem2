@@ -4,23 +4,25 @@ import Lertallerken from "../../public/image/Lertallerken.webp"
 ---
 
 <body>
-<div class="container">
-  <div class="text-section">
-    <p>
-      Velkommen til Sidses Keramik – her mødes håndværk og æstetik i unikke, håndlavede produkter. Inspireret af naturens farver og former skaber Sidse keramik med sjæl og personlighed, der bringer glæde til hverdagen. Udforsk kollektionerne og find det perfekte match til dit hjem.
-    </p>
-    <button class="button">SE PRODUKTER</button>
-  </div>
+  <div class="container">
+   
+    <div class="text-section">
+      <p>
+        Velkommen til Sidses Keramik – her mødes håndværk og æstetik i unikke, håndlavede produkter. Inspireret af naturens farver og former skaber Sidse keramik med sjæl og personlighed, der bringer glæde til hverdagen. Udforsk kollektionerne og find det perfekte match til dit hjem.
+      </p>
+      <button class="button">SE PRODUKTER</button>
+    </div>
 
-  <div class="image-section">
+    
     <div class="image-section">
-      <Image class="image" src={Lertallerken} alt="logo" />
+      <Image class="image" src={Lertallerken} alt="Keramik billede" />
+    </div>
   </div>
-</div>
 </body>
 
 
 <style>
+ 
   .container {
     display: flex;
     flex-direction: row;
@@ -28,31 +30,33 @@ import Lertallerken from "../../public/image/Lertallerken.webp"
     width: 100%;
   }
 
+  
   .text-section {
-    background-color: #c6c69a; 
+    background-color: #c6c69a;
     color: #333;
     flex: 1; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 60px;
+    box-sizing: border-box; 
   }
+
 
   .text-section p {
     font-size: 16px;
-    line-height: 2;
-    margin: 30px; 
+    line-height: 1.8;
+    margin: 0;
   }
 
-  
+
   .button {
-    background-color: #6b4f41; 
+    background-color: #6b4f41;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    align-self: flex-end; 
-    margin-top: 20px;
+    align-self: flex-end;
   }
 
   .button:hover {
@@ -62,28 +66,25 @@ import Lertallerken from "../../public/image/Lertallerken.webp"
 
   .image-section {
     flex: 1; 
+    display: block;
+    aspect-ratio: 16 / 9; 
+    overflow: hidden; 
   }
 
   .image-section img {
     width: 100%;
     height: 100%;
     object-fit: cover; 
-    display: block;
   }
 
-
+  
   @media (max-width: 768px) {
     .container {
       flex-direction: column; 
     }
 
     .text-section {
-      width: 100%;
-      padding: 30px;
-    }
-
-    .button {
-      align-self: center; 
+      padding: 30px; 
     }
 
     .image-section {
