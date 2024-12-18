@@ -1,0 +1,49 @@
+<!-- ---
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Listecard from "../../components/Listecard.astro";
+// import main.js from "../components/main.js";
+
+
+
+
+const kollektioner = await fetch("https://socvoibygqltdglscttm.supabase.co/rest/v1/listeview_card",{
+method:"GET",
+headers:{
+  apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNvY3ZvaWJ5Z3FsdGRnbHNjdHRtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM5MTg4NTksImV4cCI6MjA0OTQ5NDg1OX0.k-0jnIHYJuGx-8HeMip4kxl1phEdqwn1oct3VcV9yWE"
+},
+})
+.then((res) =>res.json());
+// // .then(showData)
+
+// // function showData(items){
+    console.log(kollektioner);
+//     // items.forEach()
+
+// // function (){}
+
+
+---
+ <h1>{kollektioner[0].titel}</h1> -->
+<!-- <Layout>
+    <Header />
+    <ul class="grid_3">
+    {kollektioner.map((kollektioner) => {return <Listecard kollektioner={kollektioner} /> ;})
+    }
+</ul> -->
+    <!-- {artists.map((artist) => <Acard artist={artist} />)} -->
+
+
+    <!-- <Listecard/>
+
+
+<Footer />
+</Layout>
+
+<style>
+    .grid_3{
+        display:grid;
+      grid-template-columns: repeat(1fr 1fr 1fr)
+    }
+</style> --> 
