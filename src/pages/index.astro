@@ -5,15 +5,12 @@ import Underhero from "../components/Underhero.astro";
 import Review from "../components/Review.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import Some1 from "../../public/image/some1.webp";
-import Some2 from "../../public/image/some2.webp";
-import Some3 from "../../public/image/some3.webp";
-import Some4 from "../../public/image/some4.webp";
 import HeroForside from "../../public/image/heroForside.webp";
 import Karrusel from "../components/Karrusel.astro";
 import Keramikkensrejse from "../components/KeramikkensRejse.astro";
 import Collageinspi from "../components/Collageinspi.astro";
 import Billedegalleri from "../components/Billedegalleri.astro";
+import Instagalleri from "../components/Instagalleri.astro";
 
 import { Image } from "astro:assets";
 import KeramikkensRejse from "../components/KeramikkensRejse.astro";
@@ -21,6 +18,7 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
 
 <Layout>
   <Header />
+  <Hero />
   <Underhero />
 
   <section class="karrusel">
@@ -37,114 +35,14 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
     <Billedegalleri/>
   </section>
 
-  <h2 class="h2">Følg med på instagram</h2>
-  <section class="grid_2 grid_5">
-    <div class="container">
-      <Image class="image" src={Some1} alt="hænder" />
-      <div class="middle">
-        <div class="instalogo">
-          <img src="../../public/image/insta.svg" alt="unda.webp" />
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <Image class="image" src={Some2} alt="hænder" />
-      <div class="middle">
-        <div class="instalogo">
-          <img src="../../public/image/insta.svg" alt="unda.webp" />
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <Image class="image" src={Some3} alt="hænder" />
-      <div class="middle">
-        <div class="instalogo">
-          <img src="../../public/image/insta.svg" alt="unda.webp" />
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <Image class="image" src={Some4} alt="hænder" />
-      <div class="middle">
-        <div class="instalogo">
-          <img src="../../public/image/insta.svg" alt="unda.webp" />
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <Image class="hide image" src={Some1} alt="hænder" />
-      <div class="middle">
-        <div class="instalogo">
-          <img src="../../public/image/insta.svg" alt="unda.webp" />
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <Image class="hide image" src={Some2} alt="hænder" />
-      <div class="middle">
-        <div class="instalogo">
-          <img src="../../public/image/insta.svg" alt="unda.webp" />
-        </div>
-      </div>
-    </div>
+  <Instagalleri/>
 
-    <div class="container">
-      <Image class="hide image" src={Some3} alt="hænder" />
-      <div class="middle">
-        <div class="instalogo">
-          <img src="../../public/image/insta.svg" alt="unda.webp" />
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <Image class="hide image" src={Some4} alt="hænder" />
-      <div class="middle">
-        <div class="instalogo">
-          <img src="../../public/image/insta.svg" alt="unda.webp" />
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <Image class="hide image" src={Some1} alt="hænder" />
-      <div class="middle">
-        <div class="instalogo">
-          <img src="../../public/image/insta.svg" alt="unda.webp" />
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <Image class="hide image" src={Some2} alt="hænder" />
-      <div class="middle">
-        <div class="instalogo">
-          <img src="../../public/image/unda.webp" alt="unda.webp" />
-        </div>
-      </div>
-    </div>
-  </section>
+ 
 </Layout>
 
 <Footer />
 
 <style>
-  .container:hover .image {
-    opacity: 0.3;
-  }
-
-  .container:hover .middle {
-    opacity: 1;
-  }
-
-  .image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: 0.5s ease;
-    backface-visibility: hidden;
-  }
-
   .middle {
     transition: 0.5s ease;
     opacity: 0;
@@ -208,10 +106,7 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
   }
 
   @media (min-width: 600px) {
-    .grid_5 {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
+  
     .grid_2-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
