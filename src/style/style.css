@@ -95,6 +95,7 @@ h3,
 .subheadline {
   line-height: 1.2;
   font-family: var(--ff-headlines);
+  color: var(--text-clr);
 }
 
 h1 {
@@ -120,9 +121,8 @@ p {
   max-width: 65ch; /* Begræns linjelængden til 65 tegn pr. linje */
 }
 
-.pcenter{
+.pcenter {
   margin: auto;
-
 }
 
 body {
