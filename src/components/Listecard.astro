@@ -13,7 +13,7 @@ headers:{
 // .then(showData)
 
 // function showData(items){
-    // console.log(kollektioner);
+    console.log(kollektioner);
     // items.forEach()
 
 // function (){}
@@ -31,9 +31,13 @@ headers:{
   <div>
     <div class="card">
         <div class="card-image">
-          <img src={"/image/" + kollektion} alt={kollektioner.img}/>
-          {kollektioner[0].img}
-          
+          <!-- <img src={"/image/" + kollektioner} alt={kollektioner.img}/> -->
+          <!-- <img src={kollektioner[0].img} alt={kollektioner[0].title} /> -->
+          {kollektioner.map((kollektioner) => (
+            <img src={kollektioner.img} alt={kollektioner.title} />
+          ))}
+
+          <!-- {kollektioner[0].img} -->
     </div>
       
         <div class="card-content">
@@ -49,7 +53,9 @@ headers:{
               {kollektioner[0].description}
 
             </p>
+            
           </div>
+          
 
           <div class="card-footer">
             <span class="basket-icon">
