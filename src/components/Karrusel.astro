@@ -57,6 +57,7 @@ headers:{
   *::after {
     box-sizing: border-box;
   }
+  
 
   .pcenter{
     max-width: 37ch;
@@ -108,7 +109,19 @@ headers:{
   }
 
   .carousel-button {
-    position: absolute;
+    position: absolute; /* Sørger for, at knapperne forbliver inden for .carousel */
+  top: 50%; /* Centrerer dem vertikalt */
+  transform: translateY(-50%); /* Perfekt centrering */
+  z-index: 2; /* Sørger for, at knapperne ligger ovenpå billederne */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--text-clr);
+  cursor: pointer;
+  border-radius: 100rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--sekundaer-clr);
+    /* position: absolute;
     z-index: 2;
     background: none;
     border: none;
@@ -119,7 +132,7 @@ headers:{
     cursor: pointer;
     border-radius: 100rem;
     padding: 0 0.6rem;
-    background-color: var(--sekundaer-clr);
+    background-color: var(--sekundaer-clr); */
   }
 
   .carousel-button:hover,
@@ -133,19 +146,27 @@ headers:{
   }
 
   .carousel-button.prev {
+  left: 10px; /* Fast placering på venstre side */
+}
+
+.carousel-button.next {
+  right: 10px; /* Fast placering på højre side */
+}
+
+  /* .carousel-button.prev {
     left: 1rem;
   }
 
   .carousel-button.next {
     right: 1rem;
-  }
+  } */
 
   @media (min-width: 600px) {
     .pcenter{
     max-width: 47ch;
     }
     .carousel-button {
-      margin: 30% 60px;
+      margin: 0 200px;
       position: relative;
 
     }
