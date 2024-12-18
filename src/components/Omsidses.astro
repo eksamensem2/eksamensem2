@@ -11,12 +11,12 @@ import omMigHero from "../../public/image/omMigHero.webp"
  <!-- HERO SECTION -->
  <header class="hero">
     <div class="hero-container">
+      <div class="hero-image">
+         <Image class="image" src={OmMigHero} alt="Keramik proces 1"/>
+      </div>
       <div class="hero-text">
         <h1>SIDSE SNEDEVIND</h1>
         <p class="subheadline">Kunstneren bag Sidses Keramik</p>
-      </div>
-      <div class="hero-image">
-         <Image class="image" src={OmMigHero} alt="Keramik proces 1"/>
       </div>
     </div>
   </header>
@@ -47,6 +47,9 @@ import omMigHero from "../../public/image/omMigHero.webp"
       </section>
 
 
+
+
+
       <style>
         /* HERO SECTION */
 .hero {
@@ -54,25 +57,32 @@ import omMigHero from "../../public/image/omMigHero.webp"
   align-items: center;
   justify-content: space-between;
   background: var(--tridaer-clr);
-
-  padding: 2rem;
 }
 
 .hero-container {
   display: flex;
   gap: 2rem;
   align-items: center;
-  
   color: var(--primaer-clr);
 }
 
 .hero-text {
   flex: 1;
+  color: var(--primaer-clr);
 }
 
 .hero-image img {
-  width: 300px;
+  width: 600px;
   height: auto;
+  margin: 0%;
+}
+
+h1{
+  color: var(--primaer-clr);
+}
+
+.subheadline {
+  color: var(--primaer-clr);
 }
 
 /* IMAGE GALLERY */
