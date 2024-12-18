@@ -3,21 +3,8 @@ import Image from "astro/components/Image.astro"
 import Lertallerken from "../../public/image/Lertallerken.webp"
 ---
 
-
-<!DOCTYPE html>
-<html lang="da">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galleri Grid</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-
 <body>
-
-<!-- HTML-Struktur -->
 <div class="container">
-  <!-- Tekstfelt -->
   <div class="text-section">
     <p>
       Velkommen til Sidses Keramik – her mødes håndværk og æstetik i unikke, håndlavede produkter. Inspireret af naturens farver og former skaber Sidse keramik med sjæl og personlighed, der bringer glæde til hverdagen. Udforsk kollektionerne og find det perfekte match til dit hjem.
@@ -25,7 +12,6 @@ import Lertallerken from "../../public/image/Lertallerken.webp"
     <button class="button">SE PRODUKTER</button>
   </div>
 
-  <!-- Billede -->
   <div class="image-section">
     <div class="image-section">
       <Image class="image" src={Lertallerken} alt="logo" />
@@ -33,41 +19,39 @@ import Lertallerken from "../../public/image/Lertallerken.webp"
 </div>
 </body>
 
-<!-- CSS -->
+
 <style>
-  /* Container - layout */
   .container {
     display: flex;
     flex-direction: row;
-    align-items: stretch; /* Sørger for, at højderne matcher */
+    align-items: stretch; 
     width: 100%;
   }
 
-  /* Tekstfelt */
   .text-section {
-    background-color: #c6c69a; /* Grøn farve */
+    background-color: #c6c69a; 
     color: #333;
-    flex: 1; /* Fylder al ledig plads */
+    flex: 1; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Knappen placeres i bunden */
+    justify-content: space-between;
     padding: 60px;
   }
 
   .text-section p {
     font-size: 16px;
     line-height: 2;
-    margin: 30px; /* Fjerner unødvendige margins */
+    margin: 30px; 
   }
 
-  /* Knap */
+  
   .button {
-    background-color: #6b4f41; /* Brun farve */
+    background-color: #6b4f41; 
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    align-self: flex-end; /* Placer knappen i højre hjørne */
+    align-self: flex-end; 
     margin-top: 20px;
   }
 
@@ -75,22 +59,22 @@ import Lertallerken from "../../public/image/Lertallerken.webp"
     background-color: #5a4033;
   }
 
-  /* Billede */
+
   .image-section {
-    flex: 1; /* Fylder halvdelen af pladsen */
+    flex: 1; 
   }
 
   .image-section img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Sørger for, at billedet fylder hele området */
+    object-fit: cover; 
     display: block;
   }
 
-  /* Responsiv til mobil */
+
   @media (max-width: 768px) {
     .container {
-      flex-direction: column; /* Stabler elementerne vertikalt */
+      flex-direction: column; 
     }
 
     .text-section {
@@ -99,11 +83,11 @@ import Lertallerken from "../../public/image/Lertallerken.webp"
     }
 
     .button {
-      align-self: center; /* Centrer knappen på mobil */
+      align-self: center; 
     }
 
     .image-section {
-      display: none; /* Skjuler billedet på mobil */
+      display: none; 
     }
   }
 </style>
