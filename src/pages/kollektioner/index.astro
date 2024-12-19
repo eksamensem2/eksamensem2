@@ -1,8 +1,5 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Footer from "../../components/Footer.astro";
-import Header from "../../components/Header.astro";
-import Image from "astro/components/Image.astro";
 import Productcard from "../../components/Productcard.astro";
 // Hent data fra API
 const response = await fetch(
@@ -27,31 +24,30 @@ const repeatedData = Array.from(
 ---
 
 <Layout>
-  <Header />
   <section class="grid_3">
     {repeatedData.map((item) => <Productcard product={item} />)};
   </section>
+
+  <style>
+    @media (min-width: 500px) {
+      .grid_3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+    @media (max-width: 678px) {
+      h3 {
+        font-size: var(--mfs-m);
+      }
+
+      p {
+        font-size: var(--mfs-s);
+      }
+
+      .subheadline {
+        font-size: var(--mfs-m);
+      }
+    }
+  </style>
 </Layout>
-
-<style>
-  @media (min-width: 500px) {
-    .grid_3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-  }
-  @media (max-width: 678px) {
-    h3 {
-      font-size: var(--mfs-m);
-    }
-
-    p {
-      font-size: var(--mfs-s);
-    }
-
-    .subheadline {
-      font-size: var(--mfs-m);
-    }
-  }
-</style>

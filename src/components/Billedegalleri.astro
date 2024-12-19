@@ -6,29 +6,39 @@ import Morgenmad from "../../public/image/Morgenmad.webp";
 import Keramiker from "../../public/image/Keramiker.webp";
 ---
 
-<div class="grid-container">
-  <div class="grid-item">
-    <a href="/kollektioner">
-      <Image class="image" src={BaenkSoMe} alt="logo" />
-    </a>
-  </div>
-  <div class="grid-item">
-    <a href="/kollektioner">
-      <Image class="image" src={Morgenmad} alt="logo" />
-    </a>
-  </div>
-  <div class="grid-item">
-    <a href="/kollektioner">
-      <Image class="image" src={Keramiker} alt="logo" />
-    </a>
-  </div>
-  <div class="grid-item">
-    <a href="/kollektioner">
-      <Image class="image" src={KopSoMe} alt="logo" />
-    </a>
-  </div>
-</div>
-
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galleri Grid</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">
+        <a href="/kollektioner">
+          <Image class="image" src={BaenkSoMe} alt="logo" />
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="/kollektioner">
+          <Image class="image" src={Morgenmad} alt="logo" />
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="/kollektioner">
+          <Image class="image" src={Keramiker} alt="logo" />
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="/kollektioner">
+          <Image class="image" src={KopSoMe} alt="logo" />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
 <style>
   body {
     margin: 0;
