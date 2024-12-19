@@ -1,12 +1,8 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Header />
-
   <h1>Kollektioner</h1>
 
   <section class="grid_4">
@@ -52,7 +48,6 @@ import Layout from "../layouts/Layout.astro";
         form.
       </p>
       <a class="button" href="">LÆS MERE</a>
-
     </div>
     <div>
       <img src="../../public/image/numbilusKollektion.webp" alt="" />
@@ -65,18 +60,14 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <Footer />
-  <Layout />
-
   <style>
     .kollektioner {
       margin: 50px 20px;
       padding: 0 0 30px 0;
     }
 
-    .kollektioncard{
-        padding: 0 0 20px 0;
-
+    .kollektioncard {
+      padding: 0 0 20px 0;
     }
     .grid_4 {
       display: grid;
@@ -106,10 +97,10 @@ import Layout from "../layouts/Layout.astro";
       margin: 0 40px;
     }
 
-    .button{
-        display: flex;
-  justify-content: center;
-  margin: 1rem 20px;
+    .button {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 20px;
     }
 
     @media (min-width: 600px) {
