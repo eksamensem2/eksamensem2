@@ -1,0 +1,52 @@
+---
+import Image from "astro/components/Image.astro"
+import omMig2 from "../../public/image/omMig2.webp"
+import omMig3 from "../../public/image/omMig3.webp"
+import omMig4 from "../../public/image/omMig4.webp"
+import omMig5 from "../../public/image/omMig5.webp"
+---
+
+<section class="image-gallery">
+    <div class="gallery-container">
+        <Image class="image" src={omMig2} alt="Keramik proces 1"/>
+        <Image class="image" src={omMig3} alt="Keramik proces 2"/>
+        <Image class="image" src={omMig4} alt="Keramik færdige produkter"/>
+        <Image class="image" src={omMig5} alt="Sidse med skål"/>
+    </div>
+  </section>
+
+  <style>
+    .image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  background: var(--primaer-clr);
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+
+.gallery-container {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1rem;
+margin: 20px;
+}
+  </style>
+
+
+
