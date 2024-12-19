@@ -96,6 +96,14 @@ import { Image } from "astro:assets";
 
 
   <style>
+    .container{
+        position: relative; /* Tilføj denne */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+    }
+
  .container:hover .image {
     opacity: 0.3;
   }
@@ -126,18 +134,12 @@ import { Image } from "astro:assets";
   }
   .middle {
     opacity: 0;
-    position: absolute;
-    width: 100%;
-    /* height: 100%; */
-    /* top: 0;
-    left: 0; */
-    /* display: flex; */
-justify-content: center;
-align-items:center;
+  position: absolute; /* Sørger for, at den ligger ovenpå billedet */
+  top: 50%; /* Centrerer vertikalt */
+  left: 50%; /* Centrerer horisontalt */
+  transform: translate(-50%, -50%); /* Centrerer perfekt */
+  transition: opacity 0.5s ease; /* Gør overgangen smooth */
 
-    /* transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center; */ */
   }
 
   .instalogo {
