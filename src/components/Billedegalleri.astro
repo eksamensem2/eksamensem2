@@ -1,90 +1,79 @@
-
 ---
-import Image from "astro/components/Image.astro"
-import KopSoMe from "../../public/image/KopSoMe.webp"
+import Image from "astro/components/Image.astro";
+import KopSoMe from "../../public/image/KopSoMe.webp";
 import BaenkSoMe from "../../public/image/BaenkSoMe.webp";
 import Morgenmad from "../../public/image/Morgenmad.webp";
 import Keramiker from "../../public/image/Keramiker.webp";
 ---
-<!DOCTYPE html>
-<html lang="da">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galleri Grid</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div class="grid-container">
-        <div class="grid-item">
-            <a href="/kollektioner">
-            <Image class="image" src={BaenkSoMe}  alt="logo" />
-        </a>
-    </div>
-        <div class="grid-item">
-            <a href="/kollektioner">
-            <Image class="image" src={Morgenmad} alt="logo"/>
-        </a>
-        </div>
-        <div class="grid-item">
-            <a href="/kollektioner">
-            <Image class="image" src={Keramiker} alt="logo"/>
-        </a>
-        </div>
-        <div class="grid-item">
-            <a href="/kollektioner">
-            <Image class="image" src={KopSoMe} alt="logo"/>
-        </a>
-        </div>
-      </div>      
-   
-</body>
-</html>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f8f5ed;
-}
-.grid-container {
-  display: grid;
-  gap: 20px; /* Afstand mellem billeder */
-  grid-template-columns: repeat(3, 1fr); /* 3 lige store kolonner */
-  grid-template-rows: auto;
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-.grid-item {
-  overflow: hidden;
-}
 
-.grid-item:hover{
-    transform: scale(1.07);
-}
-.image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-/* Specifik placering af billeder */
-.grid-item:nth-child(1) {
-  grid-column: span 2; /* Øverste venstre billede spænder 2 kolonner */
-}
-.grid-item:nth-child(2) {
-  grid-column: span 1; /* Øverste højre billede */
-}
-.grid-item:nth-child(3) {
-  grid-column: span 1; /* Nederste venstre billede */
-}
-.grid-item:nth-child(4) {
-  grid-column: span 2; /* Nederste højre billede spænder 2 kolonner */
-}
-/* Skjul grid-container på små skærme */
-@media (max-width: 768px) {
-  .grid-container {
-    display: none; 
+<div class="grid-container">
+  <div class="grid-item">
+    <a href="/kollektioner">
+      <Image class="image" src={BaenkSoMe} alt="logo" />
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="/kollektioner">
+      <Image class="image" src={Morgenmad} alt="logo" />
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="/kollektioner">
+      <Image class="image" src={Keramiker} alt="logo" />
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="/kollektioner">
+      <Image class="image" src={KopSoMe} alt="logo" />
+    </a>
+  </div>
+</div>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f5ed;
   }
-}
+  .grid-container {
+    display: grid;
+    gap: 20px; /* Afstand mellem billeder */
+    grid-template-columns: repeat(3, 1fr); /* 3 lige store kolonner */
+    grid-template-rows: auto;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .grid-item {
+    overflow: hidden;
+  }
+
+  .grid-item:hover {
+    transform: scale(1.07);
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  /* Specifik placering af billeder */
+  .grid-item:nth-child(1) {
+    grid-column: span 2; /* Øverste venstre billede spænder 2 kolonner */
+  }
+  .grid-item:nth-child(2) {
+    grid-column: span 1; /* Øverste højre billede */
+  }
+  .grid-item:nth-child(3) {
+    grid-column: span 1; /* Nederste venstre billede */
+  }
+  .grid-item:nth-child(4) {
+    grid-column: span 2; /* Nederste højre billede spænder 2 kolonner */
+  }
+  /* Skjul grid-container på små skærme */
+  @media (max-width: 768px) {
+    .grid-container {
+      display: none;
+    }
+  }
 </style>

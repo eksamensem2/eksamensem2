@@ -24,19 +24,15 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
   <section class="karrusel">
     <Karrusel />
   </section>
-  <KeramikkensRejse/>
+  <KeramikkensRejse />
 
-
-
-  <Review/>
+  <Review />
 
   <section>
-    <Billedegalleri/>
+    <Billedegalleri />
   </section>
 
-  <Instagalleri/>
-
- 
+  <Instagalleri />
 </Layout>
 
 <Footer />
@@ -64,15 +60,13 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6px;
-    padding: 0 20px ;
+    padding: 0 20px;
   }
 
   .h2 {
     text-align: center;
     padding: 50px 0 0 0;
   }
-
- 
 
   main {
     max-width: 428px;
@@ -87,15 +81,14 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
     padding: 20px 10px;
   }
 
-  
   .grønBG {
     text-align: center;
     padding: 10px;
-    background-color: var(--accent-green-clr)
+    background-color: var(--accent-green-clr);
   }
 
-  .button{
-    margin:30px;
+  .button {
+    margin: 30px;
   }
 
   @media (max-width: 600px) {
@@ -105,12 +98,10 @@ import KeramikkensRejse from "../components/KeramikkensRejse.astro";
   }
 
   @media (min-width: 600px) {
-  
     .grid_2-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0;
     }
-  
   }
 </style>
