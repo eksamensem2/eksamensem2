@@ -48,13 +48,14 @@ import Person from "../../public/image/Person.svg";
   </div>
 </footer>
 <style>
-  .footer {
+.footer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tre sektioner */
-  grid-gap: 2rem; /* Ensartet afstand mellem sektionerne */
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 2rem; 
   background-color: #CFC6B9; 
   color: #735E50;
 }
+
 
 .footer-section {
   padding: 6rem;
@@ -63,26 +64,27 @@ import Person from "../../public/image/Person.svg";
   justify-content: center;
 }
 
+
 .footer-section a {
   text-decoration: none;
   color: inherit;
   line-height: 2.5rem;
 }
 
+
 .footer-section p {
   text-decoration: none;
   color: inherit;
-  line-height: 2.5rem; 
+  line-height: 2.5rem;
   display: flex;
   align-items: center;
-  gap: 1rem; 
+  gap: 1rem;
 }
 
 .footer-section a:hover {
   color: #ab7967;
   text-decoration: underline;
 }
-
 .footer-logo {
   justify-content: center;
   align-items: center;
@@ -90,7 +92,7 @@ import Person from "../../public/image/Person.svg";
 
 .footer-logo .image {
   width: 80px;
-  margin-bottom: -1.5rem; 
+  margin-bottom: -1.5rem;
 }
 
 .footer-logo p {
@@ -100,48 +102,43 @@ import Person from "../../public/image/Person.svg";
 }
 
 @media (max-width: 768px) {
+
   .footer {
-    grid-template-columns: 1fr; /* Én kolonne i mobiltilstand */
-    grid-gap: 0.1rem; /* Mindre afstand mellem sektionerne */
+    grid-template-columns: 1fr;
+    grid-gap: 0; 
     text-align: center;
   }
 
+ 
   .footer-section {
-    padding: 2rem;
-    margin-bottom: 0.5rem; /* Ensartet afstand mellem sektionerne */
+    padding: 2rem; 
+    margin-bottom: 1rem; 
   }
 
   .footer-logo {
     grid-column: 1;
   }
 
-  /* Teksten om Sidse skal være centreret i mobil */
+  
   .footer-section p {
-    text-align: center; /* Centrer teksten */
-    gap: 0.5rem; /* Mindre gap mellem tekst og ikon */
+    text-align: center;
+    gap: 0.5rem; 
   }
+
 
   .footer-section .icons {
     justify-content: center;
     display: flex;
-    gap: 1rem; /* Mindre afstand mellem TikTok og Instagram */
+    gap: 1rem; 
     margin-top: 1rem;
   }
 
   .footer-section .icons a {
     display: inline-block;
   }
-
-  /* Ikonerne i kontaktsektionen skal være venstrestillet på mobil */
-  .footer-section .icons {
-    flex-direction: row; /* Instagram og TikTok skal være ved siden af hinanden */
-    align-items: center; /* Juster ikonerne horisontalt */
-  }
-
   .midtertekst {
-    margin-bottom: 0; 
+    margin-bottom: 0;
   }
 }
 
 </style>
-
