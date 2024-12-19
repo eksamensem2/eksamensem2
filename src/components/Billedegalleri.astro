@@ -1,3 +1,4 @@
+
 ---
 import Image from "astro/components/Image.astro"
 import KopSoMe from "../../public/image/KopSoMe.webp"
@@ -5,7 +6,6 @@ import BaenkSoMe from "../../public/image/BaenkSoMe.webp";
 import Morgenmad from "../../public/image/Morgenmad.webp";
 import Keramiker from "../../public/image/Keramiker.webp";
 ---
-
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -16,36 +16,52 @@ import Keramiker from "../../public/image/Keramiker.webp";
 </head>
 <body>
 <div class="grid-container">
-        <div class="grid-item"><Image class="image" src={BaenkSoMe}  alt="logo" /></div>
-        <div class="grid-item"><Image class="image" src={Morgenmad} alt="logo"/></div>
-        <div class="grid-item"><Image class="image" src={Keramiker} alt="logo"/></div>
-        <div class="grid-item"><Image class="image" src={KopSoMe} alt="logo"/></div>
+        <div class="grid-item">
+            <a href="/kollektioner">
+            <Image class="image" src={BaenkSoMe}  alt="logo" />
+        </a>
+    </div>
+        <div class="grid-item">
+            <a href="/kollektioner">
+            <Image class="image" src={Morgenmad} alt="logo"/>
+        </a>
+        </div>
+        <div class="grid-item">
+            <a href="/kollektioner">
+            <Image class="image" src={Keramiker} alt="logo"/>
+        </a>
+        </div>
+        <div class="grid-item">
+            <a href="/kollektioner">
+            <Image class="image" src={KopSoMe} alt="logo"/>
+        </a>
+        </div>
       </div>      
    
 </body>
 </html>
-
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f8f5ed;
 }
-
 .grid-container {
   display: grid;
-  gap: 20px; /* Afstand mellem billeder */
-  grid-template-columns: repeat(3, 1fr); /* 3 lige store kolonner */
+  gap: 20px; 
+  grid-template-columns: repeat(3, 1fr); 
   grid-template-rows: auto;
   padding: 20px;
   max-width: 1200px;
   margin: auto;
 }
-
 .grid-item {
   overflow: hidden;
 }
 
+.grid-item:hover{
+    transform: scale(1.07);
+}
 .image {
   width: 100%;
   height: 100%;
@@ -53,30 +69,22 @@ body {
   display: block;
 }
 
-/* Specifik placering af billeder */
 .grid-item:nth-child(1) {
-  grid-column: span 2; /* Øverste venstre billede spænder 2 kolonner */
+  grid-column: span 2; 
 }
-
 .grid-item:nth-child(2) {
-  grid-column: span 1; /* Øverste højre billede */
+  grid-column: span 1; 
 }
-
 .grid-item:nth-child(3) {
-  grid-column: span 1; /* Nederste venstre billede */
+  grid-column: span 1; 
 }
-
 .grid-item:nth-child(4) {
-  grid-column: span 2; /* Nederste højre billede spænder 2 kolonner */
+  grid-column: span 2; 
 }
 
-/* Skjul grid-container på små skærme */
 @media (max-width: 768px) {
   .grid-container {
     display: none; 
   }
 }
 </style>
-
-
-  
