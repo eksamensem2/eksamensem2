@@ -9,7 +9,7 @@ import Person from "../../public/image/Person.svg";
 ---
 
 <footer class="footer">
-  <!-- Venstre Sektion om Sidses Keramik-->
+
   <div class="footer-section">
     <h3>Sidses Keramik</h3>
     <p>
@@ -18,14 +18,12 @@ import Person from "../../public/image/Person.svg";
     </p>
   </div>
 
-  <!-- Midtersektion Logo -->
+
   <div class="footer-logo footer-section">
     <Image class="image" src={logo} alt="logo"/> 
     <p class="midtertekst">Alle rettigheder forbeholdt Sidses keramik ©2024. Sidses keramik · Skytten 3 · 7100 Vejle</p> 
   </div>
 
-
-  <!-- Højre Sektion - Kontakt -->
   <div class="footer-section">
     <h3>Kontakt</h3>
     <p>
@@ -41,108 +39,109 @@ import Person from "../../public/image/Person.svg";
       <a href="tel:+4526754006">+45 26754006</a>
     </p>
     <div class="icons">
-    <a href="#" aria-label="TikTok">
-      <Image class="image" src={insta} alt="logo" width="24" height="24"/>  
-      
-    </a>
-    <a href="#" aria-label="Instagram">
-      <Image class="image" src={tiktok} alt="logo" width="24" height="24"/>  
-    </div>
+      <a href="https://www.instagram.com/sidses_keramik?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+        <Image class="image" src={insta} alt="Instagram" width="24" height="24"/>  
+      </a>
+      <a href="https://www.tiktok.com/@sidses_keramik/video/7417070546589863201" aria-label="TikTok">
+        <Image class="image" src={tiktok} alt="TikTok" width="24" height="24"/>  
+      </a>
   </div>
 </footer>
 <style>
   .footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: #CFC6B9; /* Ensartet baggrund */
-    color: #735E50;
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tre sektioner */
+  grid-gap: 2rem; /* Ensartet afstand mellem sektionerne */
+  background-color: #CFC6B9; 
+  color: #735E50;
+}
 
-  /* Sektioner i footer */
-  .footer-section {
-    padding: 6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.footer-section {
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  .footer-section a {
-    text-decoration: none;
-    color: inherit;
-    line-height: 2.5rem;
-  }
+.footer-section a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 2.5rem;
+}
 
-  .footer-section p {
-    text-decoration: none;
-    color: inherit;
-    line-height: 2.5rem; /* Ens linjeafstand for kontaktsektionen */
-    display: flex;
-    align-items: center; /* Justerer ikoner og tekst på samme linje */
-    gap: 1rem; /* Ensartet afstand mellem ikon og tekst */
-  }
+.footer-section p {
+  text-decoration: none;
+  color: inherit;
+  line-height: 2.5rem; 
+  display: flex;
+  align-items: center;
+  gap: 1rem; 
+}
 
-  .footer-section a:hover {
-    color: #ab7967;
-    text-decoration: underline;
-  }
+.footer-section a:hover {
+  color: #ab7967;
+  text-decoration: underline;
+}
 
-  /* Midtersektionen */
-  .footer-logo {
-    justify-content: center;
-    align-items: center;
-  }
+.footer-logo {
+  justify-content: center;
+  align-items: center;
+}
 
-  .footer-logo .image {
-    width: 80px;
-    margin-bottom: -1.5rem; /* Justerer placeringen tættere på teksten */
-  }
+.footer-logo .image {
+  width: 80px;
+  margin-bottom: -1.5rem; 
+}
 
-  .footer-logo p {
-    font-size: 0.9rem;
+.footer-logo p {
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr; /* Én kolonne i mobiltilstand */
+    grid-gap: 0.1rem; /* Mindre afstand mellem sektionerne */
     text-align: center;
-    line-height: 1.5rem;
   }
 
-  h3 {
-    text-align: left;
+  .footer-section {
+    padding: 2rem;
+    margin-bottom: 0.5rem; /* Ensartet afstand mellem sektionerne */
   }
 
-  /* SoMe-ikoner */
-  .icons {
+  .footer-logo {
+    grid-column: 1;
+  }
+
+  /* Teksten om Sidse skal være centreret i mobil */
+  .footer-section p {
+    text-align: center; /* Centrer teksten */
+    gap: 0.5rem; /* Mindre gap mellem tekst og ikon */
+  }
+
+  .footer-section .icons {
+    justify-content: center;
     display: flex;
-    gap: 1rem;
+    gap: 1rem; /* Mindre afstand mellem TikTok og Instagram */
     margin-top: 1rem;
   }
 
-  .icons a {
+  .footer-section .icons a {
     display: inline-block;
   }
-  .midtertekst{
-    margin-bottom: -4rem;
+
+  /* Ikonerne i kontaktsektionen skal være venstrestillet på mobil */
+  .footer-section .icons {
+    flex-direction: row; /* Instagram og TikTok skal være ved siden af hinanden */
+    align-items: center; /* Juster ikonerne horisontalt */
   }
 
-  /* Responsiv styling */
-  @media (max-width: 768px) {
-    .footer {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-
-    .footer-section {
-      height: auto;
-      align-items: center;
-    }
-
-    .footer-section p {
-      text-align: center;
-    }
-
-    .footer-logo {
-      grid-column: 1;
-    }
-
-    .icons {
-      justify-content: center;
-    }
+  .midtertekst {
+    margin-bottom: 0; 
   }
+}
+
 </style>
+
