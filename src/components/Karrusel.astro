@@ -1,75 +1,84 @@
 ---
-const kollektioner = await fetch("https://socvoibygqltdglscttm.supabase.co/rest/v1/listeview_card",{
-method:"GET",
-headers:{
-  apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNvY3ZvaWJ5Z3FsdGRnbHNjdHRtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM5MTg4NTksImV4cCI6MjA0OTQ5NDg1OX0.k-0jnIHYJuGx-8HeMip4kxl1phEdqwn1oct3VcV9yWE"
-},
-})
-.then((res)=>res.json());
-
+const kollektioner = await fetch(
+  "https://socvoibygqltdglscttm.supabase.co/rest/v1/listeview_card",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNvY3ZvaWJ5Z3FsdGRnbHNjdHRtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM5MTg4NTksImV4cCI6MjA0OTQ5NDg1OX0.k-0jnIHYJuGx-8HeMip4kxl1phEdqwn1oct3VcV9yWE",
+    },
+  },
+).then((res) => res.json());
 ---
-
-
 
 <section class="karruselcard">
   <h2>Kollektioner</h2>
   <div class="carousel" data-carousel>
     <button class="carousel-button prev" data-carousel-button="prev"
-      >&#8656;</button>
+      >&#8656;</button
+    >
     <button class="carousel-button next" data-carousel-button="next"
-      >&#8658;</button>
+      >&#8658;</button
+    >
 
     <ul data-slides>
       <li class="slide" data-active>
-
-        <img class="karruselimg" src="../../public/image/silvamBG.webp" alt="silva kop" />
-        <h3>{kollektioner[0].kollektion}        </h3>
-        <p class="pcenter">{kollektioner[0].description}
-        </p>
+        <img
+          class="karruselimg"
+          src="../../public/image/silvamBG.webp"
+          alt="silva kop"
+        />
+        <h3>{kollektioner[0].kollektion}</h3>
+        <p class="pcenter">{kollektioner[0].description}</p>
       </li>
       <li class="slide">
-        <img class="karruselimg" src="../../public/image/terramBG.webp" alt="terra kop" />
-        <h3>{kollektioner[1].kollektion}        </h3>
-        <p class="pcenter">{kollektioner[1].description}
-        </p>
+        <img
+          class="karruselimg"
+          src="../../public/image/terramBG.webp"
+          alt="terra kop"
+        />
+        <h3>{kollektioner[1].kollektion}</h3>
+        <p class="pcenter">{kollektioner[1].description}</p>
       </li>
       <li class="slide">
-        <img class="karruselimg" src="../../public/image/numbilusmBG.webp" alt="numbilus kop" />
-        <h3>{kollektioner[2].kollektion}        </h3>
-        <p class="pcenter">{kollektioner[2].description}
-        </p>
+        <img
+          class="karruselimg"
+          src="../../public/image/numbilusmBG.webp"
+          alt="numbilus kop"
+        />
+        <h3>{kollektioner[2].kollektion}</h3>
+        <p class="pcenter">{kollektioner[2].description}</p>
       </li>
       <li class="slide">
-        <img class="karruselimg" src="../../public/image/undamBG.webp" alt="unda kop" />
-        <h3>{kollektioner[3].kollektion}        </h3>
-        <p class="pcenter">{kollektioner[3].description}
-        </p>
+        <img
+          class="karruselimg"
+          src="../../public/image/undamBG.webp"
+          alt="unda kop"
+        />
+        <h3>{kollektioner[3].kollektion}</h3>
+        <p class="pcenter">{kollektioner[3].description}</p>
       </li>
     </ul>
   </div>
 </section>
 
-{kollektioner[0].description}
-{kollektioner[0].price}
 <style>
   *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
-  
 
-  .pcenter{
+  .pcenter {
     max-width: 37ch;
     padding: 10px 0 0 0;
-    }
-
+  }
 
   .karruselcard {
     text-align: center;
   }
 
-  .karruselimg{
+  .karruselimg {
     padding: 40px 40px 10px 40px;
   }
 
@@ -77,7 +86,7 @@ headers:{
     width: 100vw;
     height: 100vh;
     position: relative;
-    padding: 
+    padding:;
   }
 
   .carousel > ul {
@@ -110,17 +119,17 @@ headers:{
 
   .carousel-button {
     position: absolute; /* Sørger for, at knapperne forbliver inden for .carousel */
-  top: 50%; /* Centrerer dem vertikalt */
-  transform: translateY(-50%); /* Perfekt centrering */
-  z-index: 2; /* Sørger for, at knapperne ligger ovenpå billederne */
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--text-clr);
-  cursor: pointer;
-  border-radius: 100rem;
-  padding: 0.5rem 1rem;
-  background-color: var(--sekundaer-clr);
+    top: 50%; /* Centrerer dem vertikalt */
+    transform: translateY(-50%); /* Perfekt centrering */
+    z-index: 2; /* Sørger for, at knapperne ligger ovenpå billederne */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-clr);
+    cursor: pointer;
+    border-radius: 100rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--sekundaer-clr);
     /* position: absolute;
     z-index: 2;
     background: none;
@@ -146,12 +155,12 @@ headers:{
   }
 
   .carousel-button.prev {
-  left: 10px; /* Fast placering på venstre side */
-}
+    left: 10px; /* Fast placering på venstre side */
+  }
 
-.carousel-button.next {
-  right: 10px; /* Fast placering på højre side */
-}
+  .carousel-button.next {
+    right: 10px; /* Fast placering på højre side */
+  }
 
   /* .carousel-button.prev {
     left: 1rem;
@@ -162,21 +171,19 @@ headers:{
   } */
 
   @media (min-width: 600px) {
-    .pcenter{
-    max-width: 47ch;
+    .pcenter {
+      max-width: 47ch;
     }
     .carousel-button {
       margin: 0 200px;
       position: relative;
-
     }
   }
 
-  h2{
-    padding: 50px 0 0 0;  }
+  h2 {
+    padding: 50px 0 0 0;
+  }
 </style>
-
-
 
 <script>
   const buttons = document.querySelectorAll("[data-carousel-button]");
