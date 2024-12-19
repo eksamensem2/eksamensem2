@@ -9,6 +9,8 @@ const kollektioner = await fetch(
     },
   },
 ).then((res) => res.json());
+import Image from "astro/components/Image.astro";
+import beige from "images/beige.webp"
 
 // import Image from "astro/components/Image.astro";
 // import undambg from "../image/undambg.webp";
@@ -26,6 +28,7 @@ const kollektioner = await fetch(
     <button class="carousel-button next" data-carousel-button="next"
       >&#8658;</button
     >
+    <Image class="image" src={beige} alt="Keramik proces 1"/>
 
     <ul data-slides>
       <li class="slide" data-active>
