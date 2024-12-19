@@ -16,10 +16,26 @@ import Keramiker from "../../public/image/Keramiker.webp";
 </head>
 <body>
 <div class="grid-container">
-        <div class="grid-item"><Image class="image" src={BaenkSoMe}  alt="logo" /></div>
-        <div class="grid-item"><Image class="image" src={Morgenmad} alt="logo"/></div>
-        <div class="grid-item"><Image class="image" src={Keramiker} alt="logo"/></div>
-        <div class="grid-item"><Image class="image" src={KopSoMe} alt="logo"/></div>
+        <div class="grid-item">
+            <a href="/kollektioner">
+            <Image class="image" src={BaenkSoMe}  alt="logo" />
+        </a>
+    </div>
+        <div class="grid-item">
+            <a href="/kollektioner">
+            <Image class="image" src={Morgenmad} alt="logo"/>
+        </a>
+        </div>
+        <div class="grid-item">
+            <a href="/kollektioner">
+            <Image class="image" src={Keramiker} alt="logo"/>
+        </a>
+        </div>
+        <div class="grid-item">
+            <a href="/kollektioner">
+            <Image class="image" src={KopSoMe} alt="logo"/>
+        </a>
+        </div>
       </div>      
    
 </body>
@@ -41,6 +57,10 @@ body {
 }
 .grid-item {
   overflow: hidden;
+}
+
+.grid-container:hover{
+    transform: scale(1.07);
 }
 .image {
   width: 100%;
