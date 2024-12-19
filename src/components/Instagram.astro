@@ -3,6 +3,7 @@ import Some1 from "/public/image/some1.webp";
 import Some2 from "/public/image/some2.webp";
 import Some3 from "/public/image/some3.webp";
 import Some4 from "/public/image/some4.webp";
+import Insta from "/public/image/insta.svg";
 import { Image } from "astro:assets";
 ---
 
@@ -12,7 +13,8 @@ import { Image } from "astro:assets";
     <Image class="image" src={Some1} alt="hænder" />
     <div class="middle">
       <div class="instalogo">
-        <img src="../../public/image/insta.svg" alt="unda.webp" />
+        <!-- <img src="../../public/image/insta.svg" alt="unda.webp" /> -->
+        <Image class="image" src={Insta} alt="insta" />
       </div>
     </div>
   </div>
