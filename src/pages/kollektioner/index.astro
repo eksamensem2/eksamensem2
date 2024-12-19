@@ -1,58 +1,57 @@
 ---
-// Hent data fra API
-const response = await fetch("https://socvoibygqltdglscttm.supabase.co/rest/v1/listeview_card?limit=10", {
-  method: "GET",
-  headers: {
-    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNvY3ZvaWJ5Z3FsdGRnbHNjdHRtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM5MTg4NTksImV4cCI6MjA0OTQ5NDg1OX0.k-0jnIHYJuGx-8HeMip4kxl1phEdqwn1oct3VcV9yWE",
-  },
-});
-
-const data = await response.json();
-console.log(data);
-
-// Gentag data for at sikre 10 kort
-const repeatedData = Array.from({ length: 10 }, (_, i) => data[i % data.length]);
-
 import Layout from "../../layouts/Layout.astro";
 import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
 import Image from "astro/components/Image.astro";
 import Productcard from "../../components/Productcard.astro";
+// Hent data fra API
+const response = await fetch(
+  "https://socvoibygqltdglscttm.supabase.co/rest/v1/listeview_card?limit=10",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNvY3ZvaWJ5Z3FsdGRnbHNjdHRtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM5MTg4NTksImV4cCI6MjA0OTQ5NDg1OX0.k-0jnIHYJuGx-8HeMip4kxl1phEdqwn1oct3VcV9yWE",
+    },
+  },
+);
 
+const data = await response.json();
+console.log(data);
+
+// Gentag data for at sikre 10 kort
+const repeatedData = Array.from(
+  { length: 10 },
+  (_, i) => data[i % data.length],
+);
 ---
+
 <Layout>
-<Header/>
-<section class="grid_3">
-    {repeatedData.map(item=>(
-        <Productcard product={item}/>
-    ))
-    };
-</section>
+  <Header />
+  <section class="grid_3">
+    {repeatedData.map((item) => <Productcard product={item} />)};
+  </section>
 </Layout>
 
 <style>
-
-@media (min-width: 500px) {
-  
-  .grid_3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
+  @media (min-width: 500px) {
+    .grid_3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
   }
   @media (max-width: 678px) {
-  
-  h3 {
+    h3 {
       font-size: var(--mfs-m);
     }
-  
+
     p {
       font-size: var(--mfs-s);
     }
-  
+
     .subheadline {
       font-size: var(--mfs-m);
     }
   }
-  </style>
+</style>

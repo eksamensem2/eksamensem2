@@ -1,7 +1,5 @@
 ---
-// import Layout from "../layouts/Layout.astro";
-// import Footer from "../components/Footer.astro";
-// import Header from "../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
   const artists = await fetch(
@@ -23,6 +21,7 @@ export async function getStaticPaths() {
 const { product } = Astro.props;
 ---
 
+<Layout />
 <article class="product-card">
   <img
     src={`../image/${product.img}`}
