@@ -1,0 +1,77 @@
+---
+const { product } = Astro.props;
+---
+
+<a href=`kollektioner/${product.id}`>
+  <article class="card">
+    <img
+      src={`image/${product.img}`}
+      alt={product.description}
+      class="card-image"
+    />
+    <div class="card-content">
+      <h3>{product.titel}</h3>
+      <h3>Pris: {product.price} kr.</h3>
+      <p>{product.description}</p>
+    </div>
+  </article>
+</a>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-content {
+    /* padding: 16px;
+  text-align: center; */
+
+    display: flex;
+    padding: 16px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  p {
+    margin-top: 8px;
+    color: #555;
+  }
+
+  h1,
+  h2,
+  h3,
+  .subheadline,
+  p {
+    color: var(--text-clr);
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: var(--fs-l);
+  }
+
+  .subheadline {
+    font-size: var(--fs-m);
+  }
+
+  p {
+    font-size: var(--fs-xxs);
+  }
+</style>
