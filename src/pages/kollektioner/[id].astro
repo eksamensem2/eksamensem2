@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-  const artists = await fetch(
+  const data = await fetch(
     "https://socvoibygqltdglscttm.supabase.co/rest/v1/listeview_card?limit=10",
     {
       headers: {
@@ -12,7 +12,7 @@ export async function getStaticPaths() {
     },
   ).then((res) => res.json());
 
-  return artists.map((product) => ({
+  return data.map((product) => ({
     params: { id: product.id }, // [product]=product.slug
     props: { product }, // send al data med som props
   }));
@@ -21,41 +21,42 @@ export async function getStaticPaths() {
 const { product } = Astro.props;
 ---
 
-<Layout />
-<article class="product-card">
-  <img
-    src={`../image/${product.img}`}
-    alt={product.titel}
-    class="product-image"
-  />
-  <div class="product-details">
-    <p class="collection">{product.kollektion}</p>
-    <div>
-      <h2>{product.titel}</h2>
-      <span>{product.price}</span>
-    </div>
-    <p class="product-description">{product.description}</p>
+<Layout>
+  <article class="product-card">
+    <img
+      src={`../image/${product.img}`}
+      alt={product.titel}
+      class="product-image"
+    />
+    <div class="product-details">
+      <p class="collection">{product.kollektion}</p>
+      <div class="product-farve">
+        <h2 class="product-farve">{product.titel}</h2>
+        <span>{product.price}</span>
+      </div>
+      <p class="product-description">{product.description}</p>
 
-    <div class="product-actions">
-      <label for="quantity" class="quantity-label"><em>Antal</em></label>
-      <input type="number" id="quantity" value="1" min="1" />
-      <a href="#" class="add-to-cart"
-        ><img src="../../../public/image/kurv.svg" alt="kurv logo" /></a
-      >
-    </div>
-    <div class="product-extras">
-      <a href="#" class="favorit-button"
-        ><img src="../../../public/image/hjerte_header.svg" alt="hjerte" />
-        <img src="../../../public/image/sky.svg" alt="ønskesky" />
-      </a>
-    </div>
+      <div class="product-actions">
+        <label for="quantity" class="quantity-label"><em>Antal</em></label>
+        <input class="quantity" type="number" id="quantity" value="1" min="1" />
+        <a href="#" class="add-to-cart"
+          ><img src="../../../public/image/kurv.svg" alt="kurv logo" /></a
+        >
+      </div>
+      <div class="product-extras">
+        <a href="#" class="favorit-button"
+          ><img src="../../../public/image/hjerte.svg" alt="hjerte" />
+          <img src="../../../public/image/sky.svg" alt="ønskesky" />
+        </a>
+      </div>
 
-    <div class="delivery">
-      <span class="delivery-text">Levering</span>
-      <span class="plus-sign">+</span>
+      <div class="delivery">
+        <span class="delivery-text">Levering</span>
+        <span class="plus-sign">+</span>
+      </div>
     </div>
-  </div>
-</article>
+  </article>
+</Layout>
 
 <style>
   /* PRODUCT CARD - GENEREL STRUKTUR */
@@ -68,6 +69,10 @@ const { product } = Astro.props;
     overflow: hidden;
     max-width: 800px;
     margin: 20px auto;
+  }
+
+  .product-farve {
+    color: var(--sekundaer-clr);
   }
 
   .headline-price {
@@ -163,17 +168,22 @@ const { product } = Astro.props;
     color: var(--primaer-clr);
   }
 
+  .quantity {
+    background-color: var(--primaer-clr);
+  }
+
   input[type="number"] {
-    width: 50px;
-    padding: 5px;
+    width: 90px;
+    padding: 10px;
     font-size: var(--fs-xs);
     border: 1px solid var(--sekundaer-clr);
     border-radius: 4px;
+    border-color: var(--tridaer-clr);
   }
 
   .add-to-cart {
     display: inline-flex;
-    padding: 10px 15px;
+    padding: 10px 60px;
     background: var(--primaer-clr);
     color: var(--text-clr);
     text-decoration: none;
