@@ -5,21 +5,26 @@ import omMig2 from "../../public/image/omMig2.webp"
 import omMig3 from "../../public/image/omMig3.webp"
 import omMig4 from "../../public/image/omMig4.webp"
 import omMig5 from "../../public/image/omMig5.webp"
+import drejeblaa from "../../public/image/dreje_blaa.svg"
+
+
 import omMigHero from "../../public/image/omMigHero.webp"
 ---
  
  <!-- HERO SECTION -->
+<!-- 
+ <h1 class="">SIDSE SNEDEVIND</h1>
  <header class="hero">
-    <div class="hero-container">
+   <div class="hero-container">
       <div class="hero-image">
          <Image class="image" src={OmMigHero} alt="Keramik proces 1"/>
       </div>
       <div class="hero-text">
-        <h1>SIDSE SNEDEVIND</h1>
         <p class="subheadline">Kunstneren bag Sidses Keramik</p>
+        <Image class="image" src={drejeblaa} alt="Keramik proces 1"/>
       </div>
     </div>
-  </header>
+  </header> -->
 
   <!-- BILLEDER-SEKTION -->
   <section class="image-gallery">
@@ -111,17 +116,46 @@ h1{
 .text-section {
   background: var(--accent-blue-clr);
   color: var(--text-clr);
-  padding: 3rem 2rem;
+  padding: 4rem 2rem; /* Mere luft omkring sektionen */
+  text-align: justify; /
 }
 
 .text-container {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap; /* Gør sektionen responsiv */
+  gap: 2rem; /* Luft mellem kolonnerne */
+  max-width: 1200px; /* Sæt max bredde */
+  margin: 0 auto; /* Centrer indholdet */
 }
 
 .text-left,
 .text-right {
-  flex: 1;
+  flex: 1 1 45%; /* Fleksibel bredde, sikrer balance */
+  min-width: 280px; /* Minimum bredde for kolonner */
+  line-height: 1.8; /* Forbedret læsbarhed */
 }
+
+
+
+
+@media (max-width: 768px) {
+
+
+  .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 20px;
+}
+  .text-container {
+    flex-direction: column; /* Stack kolonner på små skærme */
+  }
+
+ 
+  .text-left,
+  .text-right {
+    flex: 1 1 100%; /* Fylder hele bredden */
+    text-align: ; 
+  }
 
       </style>
