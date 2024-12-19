@@ -3,30 +3,17 @@ import Image from "astro/components/Image.astro"
 import Lertallerken from "../../public/image/Lertallerken.webp"
 ---
 
-
-<!DOCTYPE html>
-<html lang="da">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galleri Grid</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-
 <body>
+  <div class="container">
+    <!-- Tekstsektion -->
+    <div class="text-section">
+      <p>
+        Velkommen til Sidses Keramik – her mødes håndværk og æstetik i unikke, håndlavede produkter. Inspireret af naturens farver og former skaber Sidse keramik med sjæl og personlighed, der bringer glæde til hverdagen. Udforsk kollektionerne og find det perfekte match til dit hjem.
+      </p>
+      <button class="button">SE PRODUKTER</button>
+    </div>
 
-<!-- HTML-Struktur -->
-<div class="container">
-  <!-- Tekstfelt -->
-  <div class="text-section">
-    <p>
-      Velkommen til Sidses Keramik – her mødes håndværk og æstetik i unikke, håndlavede produkter. Inspireret af naturens farver og former skaber Sidse keramik med sjæl og personlighed, der bringer glæde til hverdagen. Udforsk kollektionerne og find det perfekte match til dit hjem.
-    </p>
-    <button class="button">SE PRODUKTER</button>
-  </div>
-
-  <!-- Billede -->
-  <div class="image-section">
+    <!-- Billedsektion -->
     <div class="image-section">
       <Image class="image" src={Lertallerken} alt="Keramik billede" />
     </div>
@@ -35,76 +22,75 @@ import Lertallerken from "../../public/image/Lertallerken.webp"
 
 <!-- CSS -->
 <style>
-  /* Container - layout */
+  /* Container layout */
   .container {
     display: flex;
     flex-direction: row;
-    align-items: stretch; 
+    align-items: stretch; /* Ens højde på begge elementer */
     width: 100%;
   }
 
-  
+  /* Grøn tekstsektion */
   .text-section {
     background-color: #c6c69a;
     color: #333;
-    flex: 1; 
+    flex: 1; /* Fylder al ledig plads */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Knappen placeres i bunden */
+    justify-content: space-between; /* Placerer knappen nederst */
     padding: 60px;
-    box-sizing: border-box; 
+    box-sizing: border-box; /* Sørger for korrekt padding */
   }
 
 
+  /* Tekst */
   .text-section p {
     font-size: 16px;
-    line-height: 2;
-    margin: 30px; /* Fjerner unødvendige margins */
+    line-height: 1.8;
+    margin: 0;
   }
 
-  /* Knap */
+  /* Knappen */
   .button {
     background-color: #6b4f41;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    align-self: flex-end; /* Placer knappen i højre hjørne */
-    margin-top: 20px;
+    align-self: flex-end;
   }
 
   .button:hover {
     background-color: #5a4033;
   }
 
-
+  /* Billedsektion */
   .image-section {
     flex: 1; /* Fylder halvdelen af pladsen */
+    display: block;
+    aspect-ratio: 16 / 9; /* Løser højden dynamisk */
+    overflow: hidden; /* Sørger for ingen unødvendige scrolls */
   }
 
+  /* Billedet */
   .image-section img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Sørger for, at billedet fylder hele området */
-    display: block;
+    object-fit: cover; /* Sørger for billedet fylder området pænt */
   }
 
-  /* Responsiv til mobil */
+  /* Mobilvisning */
   @media (max-width: 768px) {
     .container {
-      flex-direction: column; 
+      flex-direction: column; /* Stabler elementerne vertikalt */
     }
 
     .text-section {
-      padding: 30px; 
-    }
-
-    .button {
-      align-self: center; /* Centrer knappen på mobil */
+      padding: 30px; /* Mindre padding på mobil */
     }
 
     .image-section {
-      display: none; /* Skjuler billedet på mobil */
+      display: none; /* Skjul billedet på mobil */
     }
   }
 </style>
