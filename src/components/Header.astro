@@ -9,8 +9,12 @@ import kurv from "../../public/image/kurv.svg"
 
 <header>
   <div class="logo">
-    <!-- <a href="/index"><Image class="image" src={logo} alt="logo"/> </a> -->
-    <Image class="image"  src={logo} alt="logo"/>  </div>
+    <a href="/">
+      <Image class="image" src={logo} alt="Logo" />
+    </a>
+  </div>
+  
+  
 
   <!--Navigation -->
   <nav class="navbar">
@@ -149,13 +153,6 @@ import kurv from "../../public/image/kurv.svg"
 .icons a:hover img {
   filter: brightness(1.2); /* Let lysere effekt på billedet */
 }
-
-
-
-
-
-
-
 
   @media (max-width: 768px) {
     .menu {
