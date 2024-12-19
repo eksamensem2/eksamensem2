@@ -25,17 +25,17 @@ import Image from "astro/components/Image.astro";
 
 
 <section class="grid_3">
-    {repeatedData.map((item, index) => {
-        console.log("img: ", item.img)
+    {repeatedData.map((produkt) => {
+        console.log("img: ", produkt.img)
         return (
-      <div class="card" key={index}>
+      <div class="card">
         <div class="card-image">
-          <img src={`/image/${item.img}`} alt={item.description} />
+          <img src={`image/${produkt.img}`} alt={produkt.description} />
         </div>
         <div class="card-content">
-            <h3>{item.titel}</h3>
-          <h3>Pris: {item.price} kr.</h3>
-          <p>{item.description}</p>
+            <h3>{produkt.titel}</h3>
+          <h3>Pris: {produkt.price} kr.</h3>
+          <p>{produkt.description}</p>
                
           </div>
       </div>)}
