@@ -48,8 +48,8 @@ body {
 }
 .grid-container {
   display: grid;
-  gap: 20px; /* Afstand mellem billeder */
-  grid-template-columns: repeat(3, 1fr); /* 3 lige store kolonner */
+  gap: 20px; 
+  grid-template-columns: repeat(3, 1fr); 
   grid-template-rows: auto;
   padding: 20px;
   max-width: 1200px;
@@ -68,19 +68,21 @@ body {
   object-fit: cover;
   display: block;
 }
+
 /* Specifik placering af billeder */
 .grid-item:nth-child(1) {
-  grid-column: span 2; /* Øverste venstre billede spænder 2 kolonner */
+  grid-column: span 2; 
 }
 .grid-item:nth-child(2) {
-  grid-column: span 1; /* Øverste højre billede */
+  grid-column: span 1; 
 }
 .grid-item:nth-child(3) {
-  grid-column: span 1; /* Nederste venstre billede */
+  grid-column: span 1; 
 }
 .grid-item:nth-child(4) {
-  grid-column: span 2; /* Nederste højre billede spænder 2 kolonner */
+  grid-column: span 2; 
 }
+
 /* Skjul grid-container på små skærme */
 @media (max-width: 768px) {
   .grid-container {
