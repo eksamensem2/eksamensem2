@@ -11,10 +11,10 @@ const kollektioner = await fetch(
 ).then((res) => res.json());
 
 import Image from "astro/components/Image.astro";
-import Undambg from "../../public/image/undambg.webp";
-import Terrambg from "../../public/image/terrambg.webp";
-import Numbilusmbg from "../../public/image/numbilusmbg.webp";
-import Silva from "../../public/image/silvabg.webp";
+import undambg from "../../public/image/undambg.webp";
+import terrambg from "../../public/image/terrambg.webp";
+import numbilusmbg from "../../public/image/numbilusmbg.webp";
+import silva from "../../public/image/silvambg.webp";
 ---
 
 <section class="karruselcard">
@@ -29,22 +29,22 @@ import Silva from "../../public/image/silvabg.webp";
 
     <ul data-slides>
       <li class="slide" data-active>
-        <Image class="image" src={Undambg} alt="Keramik billede" />
+        <Image class="image" src={undambg} alt="Keramik billede" />
         <h3>{kollektioner[0].kollektion}</h3>
         <p class="pcenter">{kollektioner[0].description}</p>
       </li>
       <li class="slide">
-        <Image class="image" src={Terrambg} alt="Keramik billede" />
+        <Image class="image" src={terrambg} alt="Keramik billede" />
         <h3>{kollektioner[1].kollektion}</h3>
         <p class="pcenter">{kollektioner[1].description}</p>
       </li>
       <li class="slide">
-        <Image class="image" src={Silva} alt="Keramik billede" />
+        <Image class="image" src={silva} alt="Keramik billede" />
         <h3>{kollektioner[2].kollektion}</h3>
         <p class="pcenter">{kollektioner[2].description}</p>
       </li>
       <li class="slide">
-        <Image class="image" src={Silva} alt="Keramik billede" />
+        <Image class="image" src={silva} alt="Keramik billede" />
 
         <h3>{kollektioner[3].kollektion}</h3>
         <p class="pcenter">{kollektioner[3].description}</p>
