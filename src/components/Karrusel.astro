@@ -11,10 +11,10 @@ const kollektioner = await fetch(
 ).then((res) => res.json());
 
 import Image from "astro/components/Image.astro";
-import Undambg from "/image/undambg.webp";
-import Terrambg from "/image/terrambg.webp";
-import Numbilusmbg from "/image/numbilusmbg.webp";
-import Silvambg from "/image/silvambg.webp";
+import undambg from "/image/undambg.webp";
+import terrambg from "/image/terrambg.webp";
+import numbilusmbg from "/image/numbilusmbg.webp";
+import silvambg from "/image/silvambg.webp";
 ---
 
 <section class="karruselcard">
@@ -29,25 +29,25 @@ import Silvambg from "/image/silvambg.webp";
 
     <ul data-slides>
       <li class="slide" data-active>
-        <Image class="image" src={Undambg} alt="Keramik billede" />
+        <Image class="image" src={undambg} alt="Keramik billede" />
         <h3>{kollektioner[0].kollektion}</h3>
         <p class="pcenter">{kollektioner[0].description}</p>
       </li>
 
       <li class="slide">
-        <Image class="image" src={Terrambg} alt="Keramik billede" />
+        <Image class="image" src={terrambg} alt="Keramik billede" />
         <h3>{kollektioner[1].kollektion}</h3>
         <p class="pcenter">{kollektioner[1].description}</p>
       </li>
 
       <li class="slide">
-        <Image class="image" src={Silvambg} alt="Keramik billede" />
+        <Image class="image" src={silvambg} alt="Keramik billede" />
         <h3>{kollektioner[2].kollektion}</h3>
         <p class="pcenter">{kollektioner[2].description}</p>
       </li>
 
       <li class="slide">
-        <Image class="image" src={Numbilusmbg} alt="Keramik billede" />
+        <Image class="image" src={numbilusmbg} alt="Keramik billede" />
 
         <h3>{kollektioner[3].kollektion}</h3>
         <p class="pcenter">{kollektioner[3].description}</p>
