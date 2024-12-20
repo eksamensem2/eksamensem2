@@ -2,6 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import Undakollektion from "/public/image/undaKollektion.webp";
+import Silvakollektion from "/public/image/silvaKollektion.webp";
+import Terrakollektion from "/public/image/terraKollektion.webp";
+import Numbiluskollektion from "/public/image/numbilusKollektion.webp";
 ---
 
 <Layout>
@@ -35,7 +38,7 @@ import Undakollektion from "/public/image/undaKollektion.webp";
       <a class="button" href="">LÆS MERE</a>
     </div>
     <div>
-      <img src="../../public/image/terraKollektion.webp" alt="" />
+      <Image class="image" src={Silvakollektion} alt="insta" />
       <h3>Terra</h3>
       <p>
         Latinsk for "jord", inspireret af koppens naturlige og rustikke udtryk.
@@ -43,7 +46,7 @@ import Undakollektion from "/public/image/undaKollektion.webp";
       <a class="button" href="">LÆS MERE</a>
     </div>
     <div>
-      <img src="../../public/image/undaKollektion.webp" alt="" />
+      <Image class="image" src={Terrakollektion} alt="insta" />
       <h3>Unda</h3>
       <p>
         Latinsk for "bølge" eller "strøm", inspireret af den buede og flydende
@@ -52,7 +55,7 @@ import Undakollektion from "/public/image/undaKollektion.webp";
       <a class="button" href="">LÆS MERE</a>
     </div>
     <div>
-      <img src="../../public/image/numbilusKollektion.webp" alt="" />
+      <Image class="image" src={Numbiluskollektion} alt="insta" />
       <h3>Numbilus</h3>
       <p>
         Latinsk for "skylignende" eller "overskyet", inspireret af den bløde
